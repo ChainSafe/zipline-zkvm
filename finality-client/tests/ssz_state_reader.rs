@@ -1,5 +1,5 @@
 use direct_state_reader::DirectStateReader;
-use ethereum_consensus::bellatrix::mainnet as spec;
+use ethereum_consensus::bellatrix::minimal as spec;
 use ethereum_consensus::state_transition::Context;
 use preimage_oracle::hashmap_oracle::HashMapOracle;
 use preimage_oracle::PreimageOracle;
@@ -11,14 +11,14 @@ use zipline_finality_client::{
     ssz_state_reader::SszStateReader,
     state_reader::{StateReadError, StateReader},
 };
-use zipline_spec::{MainnetSpec as S, Spec};
+use zipline_spec::{MinimalSpec as S, Spec};
 
 mod direct_state_reader;
 
 macro_rules! test_path {
     ($t:literal) => {
         concat!(
-            "../consensus-spec-tests/tests/mainnet/bellatrix/epoch_processing/registry_updates/pyspec_tests/",
+            "../consensus-spec-tests/tests/minimal/bellatrix/epoch_processing/registry_updates/pyspec_tests/",
             $t
         )
     };

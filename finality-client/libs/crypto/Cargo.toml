@@ -5,9 +5,17 @@ edition = "2021"
 
 [dependencies]
 # This configuration of BLST can build for MIPS. Need the other one to build tests at the moment
-blst = { git = "https://github.com/ec2/blst", rev = "179bf0e", default-features = false, features = [ "portable", "no-threads" ] }
+blst = { git = "https://github.com/ec2/blst", rev = "179bf0e", default-features = false, features = [ "portable", "no-threads" ], optional = true }
 # blst = { version = "0.3.6" }
-sha2 = { version = "0.10.6", default-features = false }
+sha2 = { version = "0.10.6", default-features = false, optional = true }
+
+openvm-algebra-guest = { git = "https://github.com/openvm-org/openvm.git", rev = "f0477ab8ee276bf102afb508cbb53a63efed9711", optional = true }
+openvm-pairing-guest = { git = "https://github.com/openvm-org/openvm.git", rev = "f0477ab8ee276bf102afb508cbb53a63efed9711", features = [
+    "bls12_381",
+], optional = true }
+openvm-ecc-guest = { git = "https://github.com/openvm-org/openvm.git", rev = "f0477ab8ee276bf102afb508cbb53a63efed9711", optional = true }
+openvm-sha256-guest = { git = "https://github.com/openvm-org/openvm.git", optional = true }
+digest = "0.10.6"
 
 [dev-dependencies]
 test-utils = { path = "../test-utils" }
@@ -15,3 +23,11 @@ ethereum-consensus = { workspace = true }
 serde = "1.0.158"
 serde_with = "1.13.0"
 
+[features]
+default = ["blst", "sha2"]
+use-intrinsics = [
+    "openvm-algebra-guest",
+    "openvm-pairing-guest",
+    "openvm-sha256-guest",
+    "openvm-ecc-guest",
+]

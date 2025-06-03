@@ -1,13 +1,13 @@
 mod state_proof_test_case;
 
-use ethereum_consensus::bellatrix::mainnet as spec;
+use ethereum_consensus::bellatrix::minimal as spec;
 use ssz_rs::{compute_proof, is_valid_merkle_branch, Merkleized, Node};
 use state_proof_test_case::StateProofTestCase;
 
 macro_rules! test_path {
     ($t:literal) => {
         concat!(
-            "../consensus-spec-tests/tests/mainnet/bellatrix/finality/finality/pyspec_tests/",
+            "../consensus-spec-tests/tests/minimal/bellatrix/finality/finality/pyspec_tests/",
             $t
         )
     };

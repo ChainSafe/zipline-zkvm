@@ -1,4 +1,4 @@
-use ethereum_consensus::bellatrix::mainnet as spec;
+use ethereum_consensus::bellatrix::minimal as spec;
 use ethereum_consensus::state_transition::{Context, Result};
 use test_utils::{load_snappy_ssz, Config};
 use validator_shuffling::get_randao_index;

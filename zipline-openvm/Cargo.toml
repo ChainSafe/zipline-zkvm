@@ -1,0 +1,15 @@
+[package]
+name = "zipline-openvm"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+openvm = { git = "https://github.com/openvm-org/openvm.git", features = ["std"] }
+preimage-oracle = { path = "../preimage-oracle", default-features = false, features = ["hashmap-oracle"] }
+zipline-finality-client = { path = "../finality-client" }
+zipline-spec = { path = "../finality-client/libs/zipline-spec" }
+log = "0.4.17"
+ethereum-consensus = { workspace = true, features = ["serde"] }
+serde = "1.0.158"
+ssz-rs = { workspace = true }
+crypto = { path = "../finality-client/libs/crypto" }

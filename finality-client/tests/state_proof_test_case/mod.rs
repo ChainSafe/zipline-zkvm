@@ -1,4 +1,4 @@
-use ethereum_consensus::bellatrix::mainnet as spec;
+use ethereum_consensus::bellatrix::minimal as spec;
 use ssz_rs::prelude::*;
 use test_utils::load_snappy_ssz;
 

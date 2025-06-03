@@ -14,11 +14,15 @@ hex = { version = "0.4.3", default-features = false }
 typenum = {version = "1.16.0", feature=["no_std"]}
 # snap = "1.1.0" # breaks MIPS build. We could easily patch it though once we need it
 once_cell = {version  = "1.17", default-features = false}
+serde = { version = "1.0", features = ["derive"] }
 
 [dev-dependencies]
 env_logger = "0.10.0"
 ethereum-consensus = { workspace = true }
 serde = "1.0.158"
+serde_json = "1.0.140"
 
 test-utils = { path = "libs/test-utils" }
 cannon-emulator = { path = "../emulator" }
+
+openvm = { git = "https://github.com/openvm-org/openvm.git", features = ["std"] }

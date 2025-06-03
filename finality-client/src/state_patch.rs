@@ -15,7 +15,7 @@ use zipline_spec::Spec;
 const MAX_ACTIVATIONS: usize = 256;
 const MAX_EXITS: usize = 256;
 
-#[derive(Clone, Debug, Default, SimpleSerialize, PartialEq)]
+#[derive(Clone, Debug, Default, SimpleSerialize, PartialEq, serde::Serialize, serde::Deserialize)]
 pub struct StatePatch {
     pub epoch: u64, // epoch this patches up to. A single patch should only increment the epoch by 1
     pub activations: List<u32, MAX_ACTIVATIONS>,

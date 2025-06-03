@@ -1,6 +1,6 @@
 use crypto::bls::PublicKey;
 use ethereum_consensus::bellatrix::get_active_validator_indices;
-use ethereum_consensus::bellatrix::mainnet::BeaconState;
+use ethereum_consensus::bellatrix::minimal::BeaconState;
 use ssz_rs::prelude::*;
 use validator_shuffling::get_randao_index;
 use zipline_finality_client::state_patch::StatePatch;

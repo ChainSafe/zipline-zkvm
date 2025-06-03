@@ -5,7 +5,7 @@ use crypto::hash::H256;
 use ssz_rs::prelude::*;
 
 /// An SSZ container capturing all of the inputs required for one call to 'verify'
-#[derive(Clone, Debug, Default, SimpleSerialize, PartialEq)]
+#[derive(Clone, Debug, Default, SimpleSerialize, PartialEq, serde::Serialize, serde::Deserialize)]
 pub struct ZiplineInput<
     const MAX_COMMITTEE_SIZE: usize,
     const MAX_ATTESTATIONS: usize,

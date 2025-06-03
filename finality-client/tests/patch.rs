@@ -1,5 +1,5 @@
 use direct_state_reader::{DirectStateReader, PatchedDirectStateReader};
-use ethereum_consensus::bellatrix::mainnet as spec;
+use ethereum_consensus::bellatrix::minimal as spec;
 use ethereum_consensus::state_transition::Context;
 use patch_test_case::PatchTestCase;
 use zipline_finality_client::state_patch::StatePatch;
@@ -12,7 +12,7 @@ mod patch_test_case;
 macro_rules! test_path {
     ($t:literal) => {
         concat!(
-            "../consensus-spec-tests/tests/mainnet/bellatrix/epoch_processing/registry_updates/pyspec_tests/",
+            "../consensus-spec-tests/tests/minimal/bellatrix/epoch_processing/registry_updates/pyspec_tests/",
             $t
         )
     };
@@ -90,13 +90,15 @@ fn patched_matches_post<S: Spec>(
     Ok(())
 }
 
+use zipline_spec::MinimalSpec as S;
+
 #[test]
 fn test_activation_queue_activation_and_ejection_1() {
     let mut test_case =
         PatchTestCase::from(test_path!("activation_queue_activation_and_ejection__1"));
 
     test_case.execute(|pre, post, patch, context| {
-        patched_matches_post::<zipline_spec::MainnetSpec>(pre, post, patch, context)?;
+        patched_matches_post::<S>(pre, post, patch, context)?;
         Ok(())
     });
 }
@@ -108,7 +110,7 @@ fn test_activation_queue_activation_and_ejection_churn_limit() {
     ));
 
     test_case.execute(|pre, post, patch, context| {
-        patched_matches_post::<zipline_spec::MainnetSpec>(pre, post, patch, context)?;
+        patched_matches_post::<S>(pre, post, patch, context)?;
         Ok(())
     });
 }
@@ -120,7 +122,7 @@ fn test_activation_queue_activation_and_ejection_exceed_churn_limit() {
     ));
 
     test_case.execute(|pre, post, patch, context| {
-        patched_matches_post::<zipline_spec::MainnetSpec>(pre, post, patch, context)?;
+        patched_matches_post::<S>(pre, post, patch, context)?;
         Ok(())
     });
 }
@@ -130,7 +132,7 @@ fn test_activation_queue_efficiency_min() {
     let mut test_case = PatchTestCase::from(test_path!("activation_queue_efficiency_min"));
 
     test_case.execute(|pre, post, patch, context| {
-        patched_matches_post::<zipline_spec::MainnetSpec>(pre, post, patch, context)?;
+        patched_matches_post::<S>(pre, post, patch, context)?;
         Ok(())
     });
 }
@@ -141,7 +143,7 @@ fn test_activation_queue_no_activation_no_finality() {
         PatchTestCase::from(test_path!("activation_queue_no_activation_no_finality"));
 
     test_case.execute(|pre, post, patch, context| {
-        patched_matches_post::<zipline_spec::MainnetSpec>(pre, post, patch, context)?;
+        patched_matches_post::<S>(pre, post, patch, context)?;
         Ok(())
     });
 }
@@ -151,7 +153,7 @@ fn test_activation_queue_sorting() {
     let mut test_case = PatchTestCase::from(test_path!("activation_queue_sorting"));
 
     test_case.execute(|pre, post, patch, context| {
-        patched_matches_post::<zipline_spec::MainnetSpec>(pre, post, patch, context)?;
+        patched_matches_post::<S>(pre, post, patch, context)?;
         Ok(())
     });
 }

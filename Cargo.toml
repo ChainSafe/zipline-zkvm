@@ -7,7 +7,7 @@ members = [
     "finality-client/libs/zipline-spec",
     "emulator",
     "finality-client/libs/crypto",
-    "finality-client/libs/test-utils",
+    "finality-client/libs/test-utils", "zipline-openvm",
 ]
 
 # this is so that when we are doing debug and release builds, we don't 

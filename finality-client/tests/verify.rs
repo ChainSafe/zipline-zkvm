@@ -4,14 +4,14 @@ use alloc::collections::btree_map::BTreeMap as Map;
 use alloc::vec::Vec;
 use cannon_unicorn::{new_cannon_unicorn, run, write_input, write_program, TraceConfig, UnsyncRam};
 use crypto::hash::hash;
-use ethereum_consensus::bellatrix::mainnet as spec;
+use ethereum_consensus::bellatrix::minimal as spec;
 use preimage_oracle::hashmap_oracle::HashMapOracle;
 use ssz_rs::prelude::*;
 use std::io::Write;
 use std::sync::Once;
 use zipline_finality_client::ssz_state_reader::{PatchedSszStateReader, SszStateReader};
 use zipline_finality_client::{input::ZiplineInput, verify};
-use zipline_spec::{MainnetSpec, SpecTestSpec};
+use zipline_spec::{MinimalSpec as MainnetSpec, SpecTestSpec};
 use zipline_test_case::ZiplineTestCase;
 
 use crate::direct_state_reader::DirectStateReader;
@@ -33,7 +33,7 @@ mod zipline_test_case;
 macro_rules! test_path {
     ($t:literal) => {
         concat!(
-            "../consensus-spec-tests/tests/mainnet/bellatrix/finality/finality/pyspec_tests/",
+            "../consensus-spec-tests/tests/minimal/bellatrix/finality/finality/pyspec_tests/",
             $t
         )
     };
@@ -53,12 +53,12 @@ const MIPS_MAINNET_BIN_PATH: &str = "../zipline-state-transition-mips/build/main
 /////////////////////////////////////////////
 
 #[test]
-#[ignore]
 fn cache_finality_rule_3() {
-    let test_cases =
+    let mut test_cases =
         ZiplineTestCase::from_eth_spec_path::<SpecTestSpec>(test_path!("finality_rule_3"));
-    for (i, case) in test_cases.iter().enumerate() {
+    for (i, case) in test_cases.iter_mut().enumerate() {
         case.serialize_to_file(&format!("test_finality_rule_3_{}.ssz", i));
+        case.serialize_to_openvm_input(&format!("test_finality_rule_3_{}.json", i));
     }
 }
 
@@ -298,7 +298,7 @@ fn run_test_native(mut test: ZiplineTestCase) {
         SpecTestSpec,
         PatchedDirectStateReader,
         { spec::MAX_VALIDATORS_PER_COMMITTEE },
-        1000,
+        { spec::MAX_ATTESTATIONS },
         10,
     >(reader, test.to_input())
     .unwrap();

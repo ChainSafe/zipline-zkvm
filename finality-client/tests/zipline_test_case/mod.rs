@@ -1,6 +1,6 @@
 use crypto::hash::H256;
-use ethereum_consensus::bellatrix::mainnet as spec;
-use ethereum_consensus::bellatrix::mainnet::{BeaconBlock, BeaconState};
+use ethereum_consensus::bellatrix::minimal as spec;
+use ethereum_consensus::bellatrix::minimal::{BeaconBlock, BeaconState};
 use ethereum_consensus::state_transition::{Context, Validation};
 use ssz_rs::compute_proof;
 use ssz_rs::prelude::*;
@@ -17,11 +17,12 @@ use zipline_spec::Spec;
 type Attestation =
     zipline_finality_client::attestation::Attestation<{ spec::MAX_VALIDATORS_PER_COMMITTEE }>;
 
-#[derive(Default, SimpleSerialize)]
+#[derive(Default, SimpleSerialize, serde::Serialize, serde::Deserialize)]
 pub struct ZiplineTestCase {
     pub trusted: Checkpoint,
     pub candidate: Checkpoint,
-    pub attestations: List<Attestation, 1000>,
+    pub attestations: List<Attestation, { spec::MAX_ATTESTATIONS }>,
+    // #[serde(skip)]
     pub state: BeaconState,
     pub patches: List<StatePatch, 10>,
     pub state_proof: List<H256, 3>,
@@ -208,8 +209,31 @@ impl ZiplineTestCase {
     }
 
     pub fn serialize_to_file(&self, path: &str) {
-        let mut f = File::create(path).unwrap();
+        let mut f: File = File::create(path).unwrap();
         f.write_all(&serialize(self).unwrap()).unwrap();
+    }
+
+    pub fn serialize_to_openvm_input(&mut self, path: &str) {
+        let input = self.to_input();
+        let input_strings = openvm::serde::to_vec(&input).unwrap();
+
+        use alloc::collections::btree_map::BTreeMap as Map;
+
+        let ssz_nodes = self.state.to_merkle_tree().unwrap();
+        let mut provider: Map<[u8; 32], Vec<u8>> =
+            Map::from_iter(ssz_nodes.iter().map(|(k, v)| (*k, v.to_vec())));
+
+        let input_bytes = serialize(&input).unwrap();
+        let input_hash = crypto::hash::hash(&input_bytes);
+        provider.insert(input_hash.try_into().unwrap(), input_bytes);
+
+        let provider_strings = openvm::serde::to_vec(&provider).unwrap();
+
+        let input = serde_json::json!({
+            "input": [input_strings, provider_strings]
+        });
+        let input = serde_json::to_string(&input).unwrap();
+        std::fs::write(path, input).unwrap();
     }
 
     pub fn deserialize_from_file(path: &str) -> Self {
@@ -217,7 +241,9 @@ impl ZiplineTestCase {
         deserialize(&f.bytes().map(|b| b.unwrap()).collect::<Vec<u8>>()).unwrap()
     }
 
-    pub fn to_input(&mut self) -> ZiplineInput<{ spec::MAX_VALIDATORS_PER_COMMITTEE }, 1000, 10> {
+    pub fn to_input(
+        &mut self,
+    ) -> ZiplineInput<{ spec::MAX_VALIDATORS_PER_COMMITTEE }, { spec::MAX_ATTESTATIONS }, 10> {
         ZiplineInput {
             state_root: self
                 .state

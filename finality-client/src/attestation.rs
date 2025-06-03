@@ -6,7 +6,7 @@ use crypto::bls::BLS_SIGNATURE_BYTES_LEN;
 use crypto::hash::H256;
 use ssz_rs::prelude::*;
 
-#[derive(Clone, Debug, Default, SimpleSerialize, PartialEq)]
+#[derive(Clone, Debug, Default, SimpleSerialize, PartialEq, serde::Serialize, serde::Deserialize)]
 
 pub struct Attestation<const MAX_COMMITTEE_SIZE: usize> {
     pub aggregation_bits: Bitlist<MAX_COMMITTEE_SIZE>,
@@ -14,7 +14,7 @@ pub struct Attestation<const MAX_COMMITTEE_SIZE: usize> {
     pub signature: Vector<u8, BLS_SIGNATURE_BYTES_LEN>,
 }
 
-#[derive(Clone, Debug, Default, SimpleSerialize, PartialEq)]
+#[derive(Clone, Debug, Default, SimpleSerialize, PartialEq, serde::Serialize, serde::Deserialize)]
 pub struct AttestationData {
     pub slot: u64,
     pub index: u64,
@@ -31,7 +31,7 @@ impl AttestationData {
         }
     }
 }
-#[derive(Default, Copy, Clone, SimpleSerialize, PartialEq, Eq, Hash, PartialOrd, Ord)]
+#[derive(Default, Copy, Clone, SimpleSerialize, PartialEq, Eq, Hash, PartialOrd, Ord, serde::Serialize, serde::Deserialize)]
 pub struct Checkpoint {
     pub epoch: u64,
     pub root: H256,
