@@ -4,12 +4,40 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-openvm = { git = "https://github.com/openvm-org/openvm.git", features = ["std"] }
+openvm = { git = "https://github.com/openvm-org/openvm.git", rev = "f0477ab8ee276bf102afb508cbb53a63efed9711", features = ["std"] }
 preimage-oracle = { path = "../preimage-oracle", default-features = false, features = ["hashmap-oracle"] }
 zipline-finality-client = { path = "../finality-client" }
 zipline-spec = { path = "../finality-client/libs/zipline-spec" }
 log = "0.4.17"
-ethereum-consensus = { workspace = true, features = ["serde"] }
+# ethereum-consensus = { workspace = true, features = ["serde"] }
 serde = "1.0.158"
 ssz-rs = { workspace = true }
-crypto = { path = "../finality-client/libs/crypto" }
+crypto = { path = "../finality-client/libs/crypto", default-features = false, features = ["use-intrinsics"] }
+
+openvm-algebra-guest = { git = "https://github.com/openvm-org/openvm.git", rev = "f0477ab8ee276bf102afb508cbb53a63efed9711" }
+openvm-pairing-guest = { git = "https://github.com/openvm-org/openvm.git", rev = "f0477ab8ee276bf102afb508cbb53a63efed9711", features = [
+    "bls12_381",
+] }
+openvm-ecc-guest = { git = "https://github.com/openvm-org/openvm.git", rev = "f0477ab8ee276bf102afb508cbb53a63efed9711" }
+openvm-sha256-guest = { git = "https://github.com/openvm-org/openvm.git", rev = "f0477ab8ee276bf102afb508cbb53a63efed9711" }
+digest = "0.10.6"
+
+[build-dependencies]
+openvm-circuit = { git = "https://github.com/openvm-org/openvm.git", rev = "f0477ab8ee276bf102afb508cbb53a63efed9711", default-features = false }
+openvm-ecc-guest = { git = "https://github.com/openvm-org/openvm.git", rev = "f0477ab8ee276bf102afb508cbb53a63efed9711", default-features = false }
+openvm-pairing-guest = { git = "https://github.com/openvm-org/openvm.git", rev = "f0477ab8ee276bf102afb508cbb53a63efed9711", default-features = false, features = [
+    "bls12_381",
+] }
+openvm-transpiler = { git = "https://github.com/openvm-org/openvm.git", rev = "f0477ab8ee276bf102afb508cbb53a63efed9711", default-features = false }
+
+bls12_381 = { version = "0.8.0", default-features = false, features = [
+    "groups",
+    "pairings",
+    "alloc",
+] }
+hex = { version = "0.4.3", default-features = false, features = ["alloc"] }
+
+[target.'cfg(not(target_os = "zkvm"))'.build-dependencies]
+openvm-pairing-guest = { git = "https://github.com/openvm-org/openvm.git", rev = "f0477ab8ee276bf102afb508cbb53a63efed9711", features = [
+    "halo2curves",
+] }

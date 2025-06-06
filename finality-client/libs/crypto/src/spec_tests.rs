@@ -1,5 +1,5 @@
 use alloc::string::ToString;
-use ethereum_consensus::crypto::{verify_signature, PublicKey, Signature};
+use ethereum_consensus::crypto::{PublicKey, Signature};
 use ethereum_consensus::primitives::Bytes32;
 use serde::Deserialize;
 use serde_with::{serde_as, DefaultOnError};
@@ -28,12 +28,13 @@ impl VerifyTestCase {
     }
 
     fn run(&self) -> bool {
-        verify_signature(
-            self.input.pubkey.as_ref().unwrap(),
-            self.input.message.as_ref(),
-            self.input.signature.as_ref().unwrap(),
-        )
-        .is_ok()
+        // verify_signature(
+        //     self.input.pubkey.as_ref().unwrap(),
+        //     self.input.message.as_ref(),
+        //     self.input.signature.as_ref().unwrap(),
+        // )
+        // .is_ok()
+        unimplemented!()
     }
 }
 

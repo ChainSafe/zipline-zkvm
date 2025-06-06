@@ -215,7 +215,8 @@ impl ZiplineTestCase {
 
     pub fn serialize_to_openvm_input(&mut self, path: &str) {
         let input = self.to_input();
-        let input_strings = openvm::serde::to_vec(&input).unwrap();
+        let input_bytes = openvm::serde::to_vec(&input).unwrap().flat_map(|w| w.to_le_bytes()).collect::<Vec<_>>();
+        let input_hex_bytes = String::from("0x01") + &hex::encode(&input_bytes);
 
         use alloc::collections::btree_map::BTreeMap as Map;
 
@@ -227,10 +228,11 @@ impl ZiplineTestCase {
         let input_hash = crypto::hash::hash(&input_bytes);
         provider.insert(input_hash.try_into().unwrap(), input_bytes);
 
-        let provider_strings = openvm::serde::to_vec(&provider).unwrap();
+        let provider_strings = openvm::serde::to_vec(&provider).unwrap().flat_map(|w| w.to_le_bytes()).collect::<Vec<_>>();
+        let provider_hex_bytes = String::from("0x01") + &hex::encode(&provider_strings);
 
         let input = serde_json::json!({
-            "input": [input_strings, provider_strings]
+            "input": [input_hex_bytes, provider_hex_bytes]
         });
         let input = serde_json::to_string(&input).unwrap();
         std::fs::write(path, input).unwrap();

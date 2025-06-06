@@ -16,12 +16,12 @@ exclude = [
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [features]
-default = ["serde", "std"]
+default = ["serde"]
 std = [
     "bitvec/default",
     "sha2/default",
     "num-bigint/default",
-    "dep:thiserror",
+    # "dep:thiserror",
 ]
 serde = ["dep:serde", "dep:hex"]
 
@@ -30,7 +30,7 @@ bitvec = { version = "1.0.0", default-features = false, features = ["alloc"] }
 ssz-rs-derive = { path = "../ssz-rs-derive"}
 sha2 = { version ="0.9.8", default-features = false}
 
-thiserror = { version = "1.0.25", optional = true }
+thiserror = { version = "1.0.25" }
 serde = { version = "1.0", features = ["derive"], optional = true }
 hex = {version = "0.4.3", optional = true }
 num-bigint = { version ="0.4.3", default-features = false}

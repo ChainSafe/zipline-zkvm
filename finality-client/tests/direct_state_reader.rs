@@ -1,4 +1,4 @@
-use crypto::bls::PublicKey;
+use crypto::bls_openvm::PublicKey;
 use ethereum_consensus::bellatrix::get_active_validator_indices;
 use ethereum_consensus::bellatrix::minimal::BeaconState;
 use ssz_rs::prelude::*;

@@ -1,0 +1,1295 @@
+zipline-openvm v0.1.0 (/home/ubuntu/Zipline-Casper/zipline-openvm)
+├── openvm v1.2.0 (https://github.com/openvm-org/openvm.git#bdb4831f)
+│   ├── openvm-custom-insn v0.1.0 (proc-macro) (https://github.com/openvm-org/openvm.git#bdb4831f)
+│   │   ├── syn feature "default"
+│   │   │   ├── syn v2.0.101
+│   │   │   │   ├── proc-macro2 v1.0.95
+│   │   │   │   │   └── unicode-ident feature "default"
+│   │   │   │   │       └── unicode-ident v1.0.18
+│   │   │   │   ├── quote v1.0.40
+│   │   │   │   │   └── proc-macro2 v1.0.95 (*)
+│   │   │   │   └── unicode-ident feature "default" (*)
+│   │   │   ├── syn feature "clone-impls"
+│   │   │   │   └── syn v2.0.101 (*)
+│   │   │   ├── syn feature "derive"
+│   │   │   │   └── syn v2.0.101 (*)
+│   │   │   ├── syn feature "parsing"
+│   │   │   │   └── syn v2.0.101 (*)
+│   │   │   ├── syn feature "printing"
+│   │   │   │   └── syn v2.0.101 (*)
+│   │   │   └── syn feature "proc-macro"
+│   │   │       ├── syn v2.0.101 (*)
+│   │   │       ├── proc-macro2 feature "proc-macro"
+│   │   │       │   └── proc-macro2 v1.0.95 (*)
+│   │   │       └── quote feature "proc-macro"
+│   │   │           ├── quote v1.0.40 (*)
+│   │   │           └── proc-macro2 feature "proc-macro" (*)
+│   │   ├── syn feature "full"
+│   │   │   └── syn v2.0.101 (*)
+│   │   ├── proc-macro2 feature "default"
+│   │   │   ├── proc-macro2 v1.0.95 (*)
+│   │   │   └── proc-macro2 feature "proc-macro" (*)
+│   │   └── quote feature "default"
+│   │       ├── quote v1.0.40 (*)
+│   │       └── quote feature "proc-macro" (*)
+│   ├── openvm-rv32im-guest v1.2.0 (https://github.com/openvm-org/openvm.git#bdb4831f)
+│   │   ├── openvm-custom-insn v0.1.0 (proc-macro) (https://github.com/openvm-org/openvm.git#bdb4831f) (*)
+│   │   └── strum_macros feature "default"
+│   │       └── strum_macros v0.26.4 (proc-macro)
+│   │           ├── syn feature "default" (*)
+│   │           ├── syn feature "extra-traits"
+│   │           │   └── syn v2.0.101 (*)
+│   │           ├── syn feature "parsing" (*)
+│   │           ├── proc-macro2 feature "default" (*)
+│   │           ├── quote feature "default" (*)
+│   │           ├── heck feature "default"
+│   │           │   └── heck v0.5.0
+│   │           └── rustversion feature "default"
+│   │               └── rustversion v1.0.21 (proc-macro)
+│   ├── serde feature "alloc"
+│   │   └── serde v1.0.219
+│   │       └── serde_derive feature "default"
+│   │           └── serde_derive v1.0.219 (proc-macro)
+│   │               ├── syn feature "clone-impls" (*)
+│   │               ├── syn feature "derive" (*)
+│   │               ├── syn feature "parsing" (*)
+│   │               ├── syn feature "printing" (*)
+│   │               ├── syn feature "proc-macro" (*)
+│   │               ├── proc-macro2 feature "proc-macro" (*)
+│   │               └── quote feature "proc-macro" (*)
+│   ├── serde feature "derive"
+│   │   ├── serde v1.0.219 (*)
+│   │   └── serde feature "serde_derive"
+│   │       └── serde v1.0.219 (*)
+│   ├── bytemuck feature "extern_crate_alloc"
+│   │   └── bytemuck v1.23.0
+│   ├── openvm-platform feature "export-getrandom"
+│   │   └── openvm-platform v1.2.0 (https://github.com/openvm-org/openvm.git#bdb4831f)
+│   │       ├── openvm-custom-insn v0.1.0 (proc-macro) (https://github.com/openvm-org/openvm.git#bdb4831f) (*)
+│   │       ├── openvm-rv32im-guest v1.2.0 (https://github.com/openvm-org/openvm.git#bdb4831f) (*)
+│   │       ├── getrandom feature "custom"
+│   │       │   └── getrandom v0.2.16
+│   │       │       └── cfg-if feature "default"
+│   │       │           └── cfg-if v1.0.0
+│   │       ├── getrandom feature "default"
+│   │       │   └── getrandom v0.2.16 (*)
+│   │       └── libm feature "default"
+│   │           ├── libm v0.2.15
+│   │           └── libm feature "arch"
+│   │               └── libm v0.2.15
+│   └── openvm-platform feature "rust-runtime"
+│       ├── openvm-platform v1.2.0 (https://github.com/openvm-org/openvm.git#bdb4831f) (*)
+│       └── openvm-platform feature "export-libm"
+│           └── openvm-platform v1.2.0 (https://github.com/openvm-org/openvm.git#bdb4831f) (*)
+├── ssz-rs v0.8.0 (/home/ubuntu/Zipline-Casper/finality-client/libs/ssz-rs/ssz-rs)
+│   ├── num-bigint v0.4.6
+│   │   ├── num-integer feature "i128"
+│   │   │   └── num-integer v0.1.46
+│   │   │       └── num-traits feature "i128"
+│   │   │           └── num-traits v0.2.19
+│   │   │               [build-dependencies]
+│   │   │               └── autocfg feature "default"
+│   │   │                   └── autocfg v1.4.0
+│   │   └── num-traits feature "i128" (*)
+│   ├── sha2 v0.9.9
+│   │   ├── cfg-if feature "default" (*)
+│   │   ├── block-buffer feature "default"
+│   │   │   └── block-buffer v0.9.0
+│   │   │       └── generic-array feature "default"
+│   │   │           └── generic-array v0.14.7
+│   │   │               ├── zeroize v1.8.1
+│   │   │               └── typenum feature "default"
+│   │   │                   └── typenum v1.18.0
+│   │   │               [build-dependencies]
+│   │   │               └── version_check feature "default"
+│   │   │                   └── version_check v0.9.5
+│   │   ├── digest feature "default"
+│   │   │   └── digest v0.9.0
+│   │   │       └── generic-array feature "default" (*)
+│   │   └── opaque-debug feature "default"
+│   │       └── opaque-debug v0.3.1
+│   ├── serde feature "default"
+│   │   ├── serde v1.0.219 (*)
+│   │   └── serde feature "std"
+│   │       └── serde v1.0.219 (*)
+│   ├── serde feature "derive" (*)
+│   ├── bitvec feature "alloc"
+│   │   └── bitvec v1.0.1
+│   │       ├── funty v2.0.0
+│   │       ├── wyz v0.5.1
+│   │       │   └── tap feature "default"
+│   │       │       └── tap v1.0.1
+│   │       ├── radium feature "default"
+│   │       │   └── radium v0.7.0
+│   │       └── tap feature "default" (*)
+│   ├── hex feature "default"
+│   │   ├── hex v0.4.3
+│   │   │   └── serde v1.0.219 (*)
+│   │   └── hex feature "std"
+│   │       ├── hex v0.4.3 (*)
+│   │       └── hex feature "alloc"
+│   │           └── hex v0.4.3 (*)
+│   ├── log feature "default"
+│   │   └── log v0.4.27
+│   ├── ssz-rs-derive feature "default"
+│   │   └── ssz-rs-derive v0.8.0 (proc-macro) (/home/ubuntu/Zipline-Casper/finality-client/libs/ssz-rs/ssz-rs-derive)
+│   │       ├── proc-macro2 feature "default" (*)
+│   │       ├── quote feature "default" (*)
+│   │       └── syn feature "default"
+│   │           ├── syn v1.0.109
+│   │           │   ├── proc-macro2 v1.0.95 (*)
+│   │           │   ├── quote v1.0.40 (*)
+│   │           │   └── unicode-ident feature "default" (*)
+│   │           ├── syn feature "clone-impls"
+│   │           │   └── syn v1.0.109 (*)
+│   │           ├── syn feature "derive"
+│   │           │   └── syn v1.0.109 (*)
+│   │           ├── syn feature "parsing"
+│   │           │   └── syn v1.0.109 (*)
+│   │           ├── syn feature "printing"
+│   │           │   ├── syn v1.0.109 (*)
+│   │           │   └── syn feature "quote"
+│   │           │       └── syn v1.0.109 (*)
+│   │           └── syn feature "proc-macro"
+│   │               ├── syn v1.0.109 (*)
+│   │               ├── proc-macro2 feature "proc-macro" (*)
+│   │               ├── quote feature "proc-macro" (*)
+│   │               └── syn feature "quote" (*)
+│   └── thiserror feature "default"
+│       └── thiserror v1.0.69
+│           └── thiserror-impl feature "default"
+│               └── thiserror-impl v1.0.69 (proc-macro)
+│                   ├── syn feature "default" (*)
+│                   ├── proc-macro2 feature "default" (*)
+│                   └── quote feature "default" (*)
+│   [build-dependencies]
+│   └── sha2 v0.9.9
+│       ├── block-buffer feature "default"
+│       │   └── block-buffer v0.9.0
+│       │       └── generic-array feature "default"
+│       │           └── generic-array v0.14.7
+│       │               ├── zeroize v1.8.1
+│       │               └── typenum feature "default"
+│       │                   └── typenum v1.18.0
+│       │               [build-dependencies]
+│       │               └── version_check feature "default" (*)
+│       ├── cfg-if feature "default"
+│       │   └── cfg-if v1.0.0
+│       ├── cpufeatures feature "default"
+│       │   └── cpufeatures v0.2.17
+│       ├── digest feature "default"
+│       │   └── digest v0.9.0
+│       │       └── generic-array feature "default" (*)
+│       └── opaque-debug feature "default"
+│           └── opaque-debug v0.3.1
+├── crypto feature "default"
+│   └── crypto v0.1.0 (/home/ubuntu/Zipline-Casper/finality-client/libs/crypto)
+│       ├── digest feature "default"
+│       │   ├── digest v0.10.7
+│       │   │   ├── subtle v2.6.1
+│       │   │   ├── block-buffer feature "default"
+│       │   │   │   └── block-buffer v0.10.4
+│       │   │   │       └── generic-array feature "default" (*)
+│       │   │   ├── const-oid feature "default"
+│       │   │   │   └── const-oid v0.9.6
+│       │   │   └── crypto-common feature "default"
+│       │   │       └── crypto-common v0.1.6
+│       │   │           ├── generic-array feature "default" (*)
+│       │   │           ├── generic-array feature "more_lengths"
+│       │   │           │   └── generic-array v0.14.7 (*)
+│       │   │           └── typenum feature "default" (*)
+│       │   └── digest feature "core-api"
+│       │       ├── digest v0.10.7 (*)
+│       │       └── digest feature "block-buffer"
+│       │           └── digest v0.10.7 (*)
+│       ├── openvm-algebra-guest feature "default"
+│       │   └── openvm-algebra-guest v1.1.2 (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8)
+│       │       ├── openvm-algebra-complex-macros v0.1.0 (proc-macro) (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8)
+│       │       │   ├── openvm-macros-common v1.1.2 (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8)
+│       │       │   │   ├── syn feature "default" (*)
+│       │       │   │   └── syn feature "full" (*)
+│       │       │   ├── syn feature "default" (*)
+│       │       │   ├── syn feature "full" (*)
+│       │       │   └── quote feature "default" (*)
+│       │       ├── openvm-algebra-moduli-macros v1.1.2 (proc-macro) (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8)
+│       │       │   ├── openvm-macros-common v1.1.2 (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8) (*)
+│       │       │   ├── syn feature "default" (*)
+│       │       │   ├── syn feature "full" (*)
+│       │       │   └── quote feature "default" (*)
+│       │       ├── serde-big-array feature "default"
+│       │       │   └── serde-big-array v0.5.1
+│       │       │       └── serde v1.0.219 (*)
+│       │       └── strum_macros feature "default" (*)
+│       ├── openvm-ecc-guest feature "default"
+│       │   └── openvm-ecc-guest v1.1.2 (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8)
+│       │       ├── hex-literal v0.4.1
+│       │       ├── openvm v1.1.2 (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8)
+│       │       │   ├── openvm-custom-insn v0.1.0 (proc-macro) (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8)
+│       │       │   │   ├── syn feature "default" (*)
+│       │       │   │   ├── syn feature "full" (*)
+│       │       │   │   ├── proc-macro2 feature "default" (*)
+│       │       │   │   └── quote feature "default" (*)
+│       │       │   ├── openvm-rv32im-guest v1.1.2 (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8)
+│       │       │   │   ├── openvm-custom-insn v0.1.0 (proc-macro) (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8) (*)
+│       │       │   │   └── strum_macros feature "default" (*)
+│       │       │   ├── serde feature "alloc" (*)
+│       │       │   ├── serde feature "derive" (*)
+│       │       │   ├── bytemuck feature "extern_crate_alloc" (*)
+│       │       │   ├── openvm-platform feature "export-getrandom"
+│       │       │   │   └── openvm-platform v1.1.2 (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8)
+│       │       │   │       ├── openvm-custom-insn v0.1.0 (proc-macro) (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8) (*)
+│       │       │   │       ├── openvm-rv32im-guest v1.1.2 (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8) (*)
+│       │       │   │       ├── getrandom feature "custom" (*)
+│       │       │   │       ├── getrandom feature "default" (*)
+│       │       │   │       └── libm feature "default" (*)
+│       │       │   └── openvm-platform feature "rust-runtime"
+│       │       │       ├── openvm-platform v1.1.2 (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8) (*)
+│       │       │       └── openvm-platform feature "export-libm"
+│       │       │           └── openvm-platform v1.1.2 (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8) (*)
+│       │       ├── openvm-algebra-guest v1.1.2 (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8) (*)
+│       │       ├── openvm-algebra-moduli-macros v1.1.2 (proc-macro) (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8) (*)
+│       │       ├── openvm-custom-insn v0.1.0 (proc-macro) (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8) (*)
+│       │       ├── openvm-ecc-sw-macros v1.1.2 (proc-macro) (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8)
+│       │       │   ├── openvm-macros-common v1.1.2 (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8) (*)
+│       │       │   ├── syn feature "default" (*)
+│       │       │   ├── syn feature "full" (*)
+│       │       │   └── quote feature "default" (*)
+│       │       ├── openvm-rv32im-guest v1.1.2 (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8) (*)
+│       │       ├── serde feature "derive" (*)
+│       │       ├── strum_macros feature "default" (*)
+│       │       ├── ecdsa feature "verifying"
+│       │       │   ├── ecdsa v0.16.9
+│       │       │   │   ├── digest feature "oid"
+│       │       │   │   │   ├── digest v0.10.7 (*)
+│       │       │   │   │   └── digest feature "const-oid"
+│       │       │   │   │       └── digest v0.10.7 (*)
+│       │       │   │   ├── elliptic-curve feature "digest"
+│       │       │   │   │   └── elliptic-curve v0.13.8
+│       │       │   │   │       ├── ff v0.13.1
+│       │       │   │   │       │   ├── bitvec v1.0.1 (*)
+│       │       │   │   │       │   ├── rand_core v0.6.4
+│       │       │   │   │       │   │   └── getrandom feature "default" (*)
+│       │       │   │   │       │   └── subtle feature "i128"
+│       │       │   │   │       │       └── subtle v2.6.1
+│       │       │   │   │       ├── group v0.13.0
+│       │       │   │   │       │   ├── ff v0.13.1 (*)
+│       │       │   │   │       │   ├── rand_core v0.6.4 (*)
+│       │       │   │   │       │   └── subtle v2.6.1
+│       │       │   │   │       ├── rand_core v0.6.4 (*)
+│       │       │   │   │       ├── subtle v2.6.1
+│       │       │   │   │       ├── zeroize v1.8.1
+│       │       │   │   │       ├── digest feature "default" (*)
+│       │       │   │   │       ├── generic-array feature "zeroize"
+│       │       │   │   │       │   └── generic-array v0.14.7 (*)
+│       │       │   │   │       ├── base16ct feature "default"
+│       │       │   │   │       │   └── base16ct v0.2.0
+│       │       │   │   │       ├── crypto-bigint feature "generic-array"
+│       │       │   │   │       │   └── crypto-bigint v0.5.5
+│       │       │   │   │       │       ├── subtle v2.6.1
+│       │       │   │   │       │       ├── zeroize v1.8.1
+│       │       │   │   │       │       ├── generic-array feature "default" (*)
+│       │       │   │   │       │       └── rand_core feature "default"
+│       │       │   │   │       │           └── rand_core v0.6.4 (*)
+│       │       │   │   │       ├── crypto-bigint feature "rand_core"
+│       │       │   │   │       │   └── crypto-bigint v0.5.5 (*)
+│       │       │   │   │       ├── crypto-bigint feature "zeroize"
+│       │       │   │   │       │   └── crypto-bigint v0.5.5 (*)
+│       │       │   │   │       ├── sec1 feature "default"
+│       │       │   │   │       │   ├── sec1 v0.7.3
+│       │       │   │   │       │   │   ├── base16ct v0.2.0
+│       │       │   │   │       │   │   ├── generic-array v0.14.7 (*)
+│       │       │   │   │       │   │   ├── subtle v2.6.1
+│       │       │   │   │       │   │   ├── zeroize v1.8.1
+│       │       │   │   │       │   │   ├── der feature "default"
+│       │       │   │   │       │   │   │   └── der v0.7.10
+│       │       │   │   │       │   │   │       ├── zeroize v1.8.1
+│       │       │   │   │       │   │   │       └── const-oid feature "default" (*)
+│       │       │   │   │       │   │   └── der feature "oid"
+│       │       │   │   │       │   │       └── der v0.7.10 (*)
+│       │       │   │   │       │   ├── sec1 feature "der"
+│       │       │   │   │       │   │   ├── sec1 v0.7.3 (*)
+│       │       │   │   │       │   │   └── sec1 feature "zeroize"
+│       │       │   │   │       │   │       ├── sec1 v0.7.3 (*)
+│       │       │   │   │       │   │       └── der feature "zeroize"
+│       │       │   │   │       │   │           └── der v0.7.10 (*)
+│       │       │   │   │       │   └── sec1 feature "point"
+│       │       │   │   │       │       └── sec1 v0.7.3 (*)
+│       │       │   │   │       ├── sec1 feature "subtle"
+│       │       │   │   │       │   └── sec1 v0.7.3 (*)
+│       │       │   │   │       └── sec1 feature "zeroize" (*)
+│       │       │   │   ├── elliptic-curve feature "sec1"
+│       │       │   │   │   └── elliptic-curve v0.13.8 (*)
+│       │       │   │   └── signature feature "rand_core"
+│       │       │   │       └── signature v2.2.0
+│       │       │   │           ├── digest v0.10.7 (*)
+│       │       │   │           └── rand_core v0.6.4 (*)
+│       │       │   ├── ecdsa feature "arithmetic"
+│       │       │   │   ├── ecdsa v0.16.9 (*)
+│       │       │   │   └── elliptic-curve feature "arithmetic"
+│       │       │   │       ├── elliptic-curve v0.13.8 (*)
+│       │       │   │       └── elliptic-curve feature "group"
+│       │       │   │           ├── elliptic-curve v0.13.8 (*)
+│       │       │   │           └── elliptic-curve feature "ff"
+│       │       │   │               └── elliptic-curve v0.13.8 (*)
+│       │       │   ├── ecdsa feature "digest"
+│       │       │   │   ├── ecdsa v0.16.9 (*)
+│       │       │   │   └── signature feature "digest"
+│       │       │   │       └── signature v2.2.0 (*)
+│       │       │   └── ecdsa feature "hazmat"
+│       │       │       └── ecdsa v0.16.9 (*)
+│       │       ├── elliptic-curve feature "arithmetic" (*)
+│       │       ├── elliptic-curve feature "sec1" (*)
+│       │       ├── group feature "default"
+│       │       │   ├── group v0.13.0 (*)
+│       │       │   └── group feature "alloc"
+│       │       │       └── group v0.13.0 (*)
+│       │       ├── halo2curves-axiom feature "default"
+│       │       │   ├── halo2curves-axiom v0.7.0
+│       │       │   │   ├── rand_core v0.6.4 (*)
+│       │       │   │   ├── serde v1.0.219 (*)
+│       │       │   │   ├── digest feature "default" (*)
+│       │       │   │   ├── subtle feature "default"
+│       │       │   │   │   ├── subtle v2.6.1
+│       │       │   │   │   ├── subtle feature "i128" (*)
+│       │       │   │   │   └── subtle feature "std"
+│       │       │   │   │       └── subtle v2.6.1
+│       │       │   │   ├── ff feature "std"
+│       │       │   │   │   ├── ff v0.13.1 (*)
+│       │       │   │   │   └── ff feature "alloc"
+│       │       │   │   │       └── ff v0.13.1 (*)
+│       │       │   │   ├── group feature "default" (*)
+│       │       │   │   ├── blake2b_simd feature "default"
+│       │       │   │   │   ├── blake2b_simd v1.0.3
+│       │       │   │   │   │   ├── arrayvec v0.7.6
+│       │       │   │   │   │   ├── arrayref feature "default"
+│       │       │   │   │   │   │   └── arrayref v0.3.9
+│       │       │   │   │   │   └── constant_time_eq feature "default"
+│       │       │   │   │   │       └── constant_time_eq v0.3.1
+│       │       │   │   │   └── blake2b_simd feature "std"
+│       │       │   │   │       └── blake2b_simd v1.0.3 (*)
+│       │       │   │   ├── hex feature "alloc" (*)
+│       │       │   │   ├── hex feature "serde"
+│       │       │   │   │   └── hex v0.4.3 (*)
+│       │       │   │   ├── lazy_static feature "default"
+│       │       │   │   │   └── lazy_static v1.5.0
+│       │       │   │   │       └── spin feature "once"
+│       │       │   │   │           └── spin v0.9.8
+│       │       │   │   │               └── lock_api feature "default"
+│       │       │   │   │                   ├── lock_api v0.4.12
+│       │       │   │   │                   │   └── scopeguard v1.2.0
+│       │       │   │   │                   │   [build-dependencies]
+│       │       │   │   │                   │   └── autocfg feature "default" (*)
+│       │       │   │   │                   └── lock_api feature "atomic_usize"
+│       │       │   │   │                       └── lock_api v0.4.12 (*)
+│       │       │   │   ├── num-bigint feature "default"
+│       │       │   │   │   ├── num-bigint v0.4.6 (*)
+│       │       │   │   │   └── num-bigint feature "std"
+│       │       │   │   │       ├── num-bigint v0.4.6 (*)
+│       │       │   │   │       ├── num-integer feature "std"
+│       │       │   │   │       │   ├── num-integer v0.1.46 (*)
+│       │       │   │   │       │   └── num-traits feature "std"
+│       │       │   │   │       │       └── num-traits v0.2.19 (*)
+│       │       │   │   │       └── num-traits feature "std" (*)
+│       │       │   │   ├── num-traits feature "default"
+│       │       │   │   │   ├── num-traits v0.2.19 (*)
+│       │       │   │   │   └── num-traits feature "std" (*)
+│       │       │   │   ├── pairing feature "default"
+│       │       │   │   │   └── pairing v0.23.0
+│       │       │   │   │       └── group v0.13.0 (*)
+│       │       │   │   ├── pasta_curves feature "default"
+│       │       │   │   │   ├── pasta_curves v0.5.1
+│       │       │   │   │   │   ├── blake2b_simd v1.0.3 (*)
+│       │       │   │   │   │   ├── ff v0.13.1 (*)
+│       │       │   │   │   │   ├── group v0.13.0 (*)
+│       │       │   │   │   │   ├── rand v0.8.5
+│       │       │   │   │   │   │   ├── rand_chacha v0.3.1
+│       │       │   │   │   │   │   │   ├── rand_core feature "default" (*)
+│       │       │   │   │   │   │   │   └── ppv-lite86 feature "simd"
+│       │       │   │   │   │   │   │       └── ppv-lite86 v0.2.21
+│       │       │   │   │   │   │   │           ├── zerocopy feature "default"
+│       │       │   │   │   │   │   │           │   └── zerocopy v0.8.25
+│       │       │   │   │   │   │   │           └── zerocopy feature "simd"
+│       │       │   │   │   │   │   │               └── zerocopy v0.8.25
+│       │       │   │   │   │   │   └── rand_core feature "default" (*)
+│       │       │   │   │   │   ├── subtle v2.6.1
+│       │       │   │   │   │   ├── lazy_static feature "default" (*)
+│       │       │   │   │   │   ├── lazy_static feature "spin_no_std"
+│       │       │   │   │   │   │   ├── lazy_static v1.5.0 (*)
+│       │       │   │   │   │   │   └── lazy_static feature "spin"
+│       │       │   │   │   │   │       └── lazy_static v1.5.0 (*)
+│       │       │   │   │   │   └── static_assertions feature "default"
+│       │       │   │   │   │       └── static_assertions v1.1.0
+│       │       │   │   │   ├── pasta_curves feature "bits"
+│       │       │   │   │   │   ├── pasta_curves v0.5.1 (*)
+│       │       │   │   │   │   └── ff feature "bits"
+│       │       │   │   │   │       ├── ff v0.13.1 (*)
+│       │       │   │   │   │       └── ff feature "bitvec"
+│       │       │   │   │   │           └── ff v0.13.1 (*)
+│       │       │   │   │   └── pasta_curves feature "sqrt-table"
+│       │       │   │   │       ├── pasta_curves v0.5.1 (*)
+│       │       │   │   │       ├── pasta_curves feature "alloc"
+│       │       │   │   │       │   ├── pasta_curves v0.5.1 (*)
+│       │       │   │   │       │   ├── group feature "alloc" (*)
+│       │       │   │   │       │   └── pasta_curves feature "blake2b_simd"
+│       │       │   │   │       │       └── pasta_curves v0.5.1 (*)
+│       │       │   │   │       └── pasta_curves feature "lazy_static"
+│       │       │   │   │           └── pasta_curves v0.5.1 (*)
+│       │       │   │   ├── rand feature "default"
+│       │       │   │   │   ├── rand v0.8.5 (*)
+│       │       │   │   │   ├── rand feature "std"
+│       │       │   │   │   │   ├── rand v0.8.5 (*)
+│       │       │   │   │   │   ├── rand_core feature "std"
+│       │       │   │   │   │   │   ├── rand_core v0.6.4 (*)
+│       │       │   │   │   │   │   ├── rand_core feature "alloc"
+│       │       │   │   │   │   │   │   └── rand_core v0.6.4 (*)
+│       │       │   │   │   │   │   ├── rand_core feature "getrandom"
+│       │       │   │   │   │   │   │   └── rand_core v0.6.4 (*)
+│       │       │   │   │   │   │   └── getrandom feature "std"
+│       │       │   │   │   │   │       └── getrandom v0.2.16 (*)
+│       │       │   │   │   │   ├── rand feature "alloc"
+│       │       │   │   │   │   │   ├── rand v0.8.5 (*)
+│       │       │   │   │   │   │   └── rand_core feature "alloc" (*)
+│       │       │   │   │   │   ├── rand feature "getrandom"
+│       │       │   │   │   │   │   ├── rand v0.8.5 (*)
+│       │       │   │   │   │   │   └── rand_core feature "getrandom" (*)
+│       │       │   │   │   │   ├── rand feature "libc"
+│       │       │   │   │   │   │   └── rand v0.8.5 (*)
+│       │       │   │   │   │   ├── rand feature "rand_chacha"
+│       │       │   │   │   │   │   └── rand v0.8.5 (*)
+│       │       │   │   │   │   └── rand_chacha feature "std"
+│       │       │   │   │   │       ├── rand_chacha v0.3.1 (*)
+│       │       │   │   │   │       └── ppv-lite86 feature "std"
+│       │       │   │   │   │           └── ppv-lite86 v0.2.21 (*)
+│       │       │   │   │   └── rand feature "std_rng"
+│       │       │   │   │       ├── rand v0.8.5 (*)
+│       │       │   │   │       └── rand feature "rand_chacha" (*)
+│       │       │   │   ├── static_assertions feature "default" (*)
+│       │       │   │   ├── paste feature "default"
+│       │       │   │   │   └── paste v1.0.15 (proc-macro)
+│       │       │   │   ├── rayon feature "default"
+│       │       │   │   │   └── rayon v1.10.0
+│       │       │   │   │       ├── either v1.15.0
+│       │       │   │   │       └── rayon-core feature "default"
+│       │       │   │   │           └── rayon-core v1.12.1
+│       │       │   │   │               ├── crossbeam-deque feature "default"
+│       │       │   │   │               │   ├── crossbeam-deque v0.8.6
+│       │       │   │   │               │   │   ├── crossbeam-epoch v0.9.18
+│       │       │   │   │               │   │   │   └── crossbeam-utils v0.8.21
+│       │       │   │   │               │   │   └── crossbeam-utils v0.8.21
+│       │       │   │   │               │   └── crossbeam-deque feature "std"
+│       │       │   │   │               │       ├── crossbeam-deque v0.8.6 (*)
+│       │       │   │   │               │       ├── crossbeam-epoch feature "std"
+│       │       │   │   │               │       │   ├── crossbeam-epoch v0.9.18 (*)
+│       │       │   │   │               │       │   ├── crossbeam-epoch feature "alloc"
+│       │       │   │   │               │       │   │   └── crossbeam-epoch v0.9.18 (*)
+│       │       │   │   │               │       │   └── crossbeam-utils feature "std"
+│       │       │   │   │               │       │       └── crossbeam-utils v0.8.21
+│       │       │   │   │               │       └── crossbeam-utils feature "std" (*)
+│       │       │   │   │               └── crossbeam-utils feature "default"
+│       │       │   │   │                   ├── crossbeam-utils v0.8.21
+│       │       │   │   │                   └── crossbeam-utils feature "std" (*)
+│       │       │   │   ├── serde_arrays feature "default"
+│       │       │   │   │   └── serde_arrays v0.1.0
+│       │       │   │   │       └── serde feature "default" (*)
+│       │       │   │   ├── sha2 feature "default"
+│       │       │   │   │   ├── sha2 v0.10.9
+│       │       │   │   │   │   ├── digest feature "default" (*)
+│       │       │   │   │   │   └── cfg-if feature "default" (*)
+│       │       │   │   │   └── sha2 feature "std"
+│       │       │   │   │       ├── sha2 v0.10.9 (*)
+│       │       │   │   │       └── digest feature "std"
+│       │       │   │   │           ├── digest v0.10.7 (*)
+│       │       │   │   │           ├── digest feature "alloc"
+│       │       │   │   │           │   └── digest v0.10.7 (*)
+│       │       │   │   │           └── crypto-common feature "std"
+│       │       │   │   │               └── crypto-common v0.1.6 (*)
+│       │       │   │   └── unroll feature "default"
+│       │       │   │       └── unroll v0.1.5 (proc-macro)
+│       │       │   │           ├── quote feature "default" (*)
+│       │       │   │           ├── syn feature "default" (*)
+│       │       │   │           └── syn feature "full"
+│       │       │   │               └── syn v1.0.109 (*)
+│       │       │   ├── halo2curves-axiom feature "bits"
+│       │       │   │   ├── halo2curves-axiom v0.7.0 (*)
+│       │       │   │   └── ff feature "bits" (*)
+│       │       │   ├── halo2curves-axiom feature "bn256-table"
+│       │       │   │   └── halo2curves-axiom v0.7.0 (*)
+│       │       │   └── halo2curves-axiom feature "derive_serde"
+│       │       │       ├── halo2curves-axiom v0.7.0 (*)
+│       │       │       ├── serde feature "derive" (*)
+│       │       │       ├── halo2curves-axiom feature "hex"
+│       │       │       │   └── halo2curves-axiom v0.7.0 (*)
+│       │       │       ├── halo2curves-axiom feature "serde"
+│       │       │       │   └── halo2curves-axiom v0.7.0 (*)
+│       │       │       └── halo2curves-axiom feature "serde_arrays"
+│       │       │           └── halo2curves-axiom v0.7.0 (*)
+│       │       ├── once_cell feature "alloc"
+│       │       │   ├── once_cell v1.21.3
+│       │       │   └── once_cell feature "race"
+│       │       │       └── once_cell v1.21.3
+│       │       └── once_cell feature "race" (*)
+│       ├── openvm-pairing-guest feature "bls12_381"
+│       │   └── openvm-pairing-guest v1.1.2 (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8)
+│       │       ├── hex-literal v0.4.1
+│       │       ├── openvm v1.1.2 (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8) (*)
+│       │       ├── openvm-algebra-complex-macros v0.1.0 (proc-macro) (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8) (*)
+│       │       ├── openvm-algebra-guest v1.1.2 (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8) (*)
+│       │       ├── openvm-algebra-moduli-macros v1.1.2 (proc-macro) (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8) (*)
+│       │       ├── openvm-custom-insn v0.1.0 (proc-macro) (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8) (*)
+│       │       ├── openvm-ecc-guest v1.1.2 (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8) (*)
+│       │       ├── openvm-ecc-sw-macros v1.1.2 (proc-macro) (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8) (*)
+│       │       ├── openvm-platform v1.1.2 (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8) (*)
+│       │       ├── openvm-rv32im-guest v1.1.2 (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8) (*)
+│       │       ├── rand v0.8.5 (*)
+│       │       ├── serde feature "derive" (*)
+│       │       ├── strum_macros feature "default" (*)
+│       │       ├── group feature "default" (*)
+│       │       └── itertools feature "use_alloc"
+│       │           └── itertools v0.14.0
+│       │               └── either v1.15.0
+│       ├── openvm-pairing-guest feature "default"
+│       │   └── openvm-pairing-guest v1.1.2 (https://github.com/openvm-org/openvm.git?rev=f0477ab8ee276bf102afb508cbb53a63efed9711#f0477ab8) (*)
+│       └── openvm-sha256-guest feature "default"
+│           └── openvm-sha256-guest v1.2.0 (https://github.com/openvm-org/openvm.git#bdb4831f)
+│               └── openvm-platform v1.2.0 (https://github.com/openvm-org/openvm.git#bdb4831f) (*)
+├── crypto feature "use-intrinsics"
+│   ├── crypto v0.1.0 (/home/ubuntu/Zipline-Casper/finality-client/libs/crypto) (*)
+│   ├── crypto feature "openvm-algebra-guest"
+│   │   └── crypto v0.1.0 (/home/ubuntu/Zipline-Casper/finality-client/libs/crypto) (*)
+│   ├── crypto feature "openvm-ecc-guest"
+│   │   └── crypto v0.1.0 (/home/ubuntu/Zipline-Casper/finality-client/libs/crypto) (*)
+│   ├── crypto feature "openvm-pairing-guest"
+│   │   └── crypto v0.1.0 (/home/ubuntu/Zipline-Casper/finality-client/libs/crypto) (*)
+│   └── crypto feature "openvm-sha256-guest"
+│       └── crypto v0.1.0 (/home/ubuntu/Zipline-Casper/finality-client/libs/crypto) (*)
+├── serde feature "default" (*)
+├── ethereum-consensus feature "default"
+│   ├── ethereum-consensus v0.1.1 (https://github.com/nulltea/ethereum-consensus?rev=facd29481b844c864434b9d6d580ce081ddd6570#facd2948)
+│   │   ├── rand_core v0.6.4 (*)
+│   │   ├── serde feature "default" (*)
+│   │   ├── serde feature "derive" (*)
+│   │   ├── hex feature "default" (*)
+│   │   ├── async-stream feature "default"
+│   │   │   └── async-stream v0.3.6
+│   │   │       ├── async-stream-impl feature "default"
+│   │   │       │   └── async-stream-impl v0.3.6 (proc-macro)
+│   │   │       │       ├── syn feature "default" (*)
+│   │   │       │       ├── syn feature "full" (*)
+│   │   │       │       ├── syn feature "visit-mut"
+│   │   │       │       │   └── syn v2.0.101 (*)
+│   │   │       │       ├── proc-macro2 feature "default" (*)
+│   │   │       │       └── quote feature "default" (*)
+│   │   │       ├── futures-core feature "default"
+│   │   │       │   ├── futures-core v0.3.31
+│   │   │       │   └── futures-core feature "std"
+│   │   │       │       ├── futures-core v0.3.31
+│   │   │       │       └── futures-core feature "alloc"
+│   │   │       │           └── futures-core v0.3.31
+│   │   │       └── pin-project-lite feature "default"
+│   │   │           └── pin-project-lite v0.2.16
+│   │   ├── bs58 feature "default"
+│   │   │   ├── bs58 v0.4.0
+│   │   │   └── bs58 feature "std"
+│   │   │       ├── bs58 v0.4.0
+│   │   │       └── bs58 feature "alloc"
+│   │   │           └── bs58 v0.4.0
+│   │   ├── enr feature "default"
+│   │   │   ├── enr v0.6.2
+│   │   │   │   ├── zeroize feature "default"
+│   │   │   │   │   ├── zeroize v1.8.1
+│   │   │   │   │   └── zeroize feature "alloc"
+│   │   │   │   │       └── zeroize v1.8.1
+│   │   │   │   ├── serde feature "default" (*)
+│   │   │   │   ├── hex feature "default" (*)
+│   │   │   │   ├── rand feature "default" (*)
+│   │   │   │   ├── bs58 feature "default" (*)
+│   │   │   │   ├── base64 feature "default"
+│   │   │   │   │   ├── base64 v0.13.1
+│   │   │   │   │   └── base64 feature "std"
+│   │   │   │   │       └── base64 v0.13.1
+│   │   │   │   ├── bytes feature "default"
+│   │   │   │   │   ├── bytes v1.10.1
+│   │   │   │   │   └── bytes feature "std"
+│   │   │   │   │       └── bytes v1.10.1
+│   │   │   │   ├── k256 feature "default"
+│   │   │   │   │   ├── k256 v0.11.6
+│   │   │   │   │   │   ├── sha2 v0.10.9 (*)
+│   │   │   │   │   │   ├── cfg-if feature "default" (*)
+│   │   │   │   │   │   ├── ecdsa feature "der"
+│   │   │   │   │   │   │   └── ecdsa v0.14.8
+│   │   │   │   │   │   │       ├── der feature "default"
+│   │   │   │   │   │   │       │   └── der v0.6.1
+│   │   │   │   │   │   │       │       ├── zeroize feature "alloc" (*)
+│   │   │   │   │   │   │       │       └── const-oid feature "default" (*)
+│   │   │   │   │   │   │       ├── elliptic-curve feature "digest"
+│   │   │   │   │   │   │       │   └── elliptic-curve v0.12.3
+│   │   │   │   │   │   │       │       ├── ff v0.12.1
+│   │   │   │   │   │   │       │       │   ├── rand_core v0.6.4 (*)
+│   │   │   │   │   │   │       │       │   └── subtle feature "i128" (*)
+│   │   │   │   │   │   │       │       ├── generic-array v0.14.7 (*)
+│   │   │   │   │   │   │       │       ├── group v0.12.1
+│   │   │   │   │   │   │       │       │   ├── ff v0.12.1 (*)
+│   │   │   │   │   │   │       │       │   ├── rand_core v0.6.4 (*)
+│   │   │   │   │   │   │       │       │   └── subtle v2.6.1
+│   │   │   │   │   │   │       │       ├── pkcs8 v0.9.0
+│   │   │   │   │   │   │       │       │   ├── der feature "default" (*)
+│   │   │   │   │   │   │       │       │   ├── der feature "oid"
+│   │   │   │   │   │   │       │       │   │   ├── der v0.6.1 (*)
+│   │   │   │   │   │   │       │       │   │   └── der feature "const-oid"
+│   │   │   │   │   │   │       │       │   │       └── der v0.6.1 (*)
+│   │   │   │   │   │   │       │       │   └── spki feature "default"
+│   │   │   │   │   │   │       │       │       └── spki v0.6.0
+│   │   │   │   │   │   │       │       │           ├── base64ct v1.7.3
+│   │   │   │   │   │   │       │       │           ├── der feature "default" (*)
+│   │   │   │   │   │   │       │       │           └── der feature "oid" (*)
+│   │   │   │   │   │   │       │       ├── rand_core v0.6.4 (*)
+│   │   │   │   │   │   │       │       ├── subtle v2.6.1
+│   │   │   │   │   │   │       │       ├── zeroize v1.8.1
+│   │   │   │   │   │   │       │       ├── digest feature "default" (*)
+│   │   │   │   │   │   │       │       ├── der feature "oid" (*)
+│   │   │   │   │   │   │       │       ├── base16ct feature "default"
+│   │   │   │   │   │   │       │       │   └── base16ct v0.1.1
+│   │   │   │   │   │   │       │       ├── crypto-bigint feature "generic-array"
+│   │   │   │   │   │   │       │       │   └── crypto-bigint v0.4.9
+│   │   │   │   │   │   │       │       │       ├── subtle v2.6.1
+│   │   │   │   │   │   │       │       │       ├── zeroize v1.8.1
+│   │   │   │   │   │   │       │       │       ├── generic-array feature "default" (*)
+│   │   │   │   │   │   │       │       │       └── rand_core feature "default" (*)
+│   │   │   │   │   │   │       │       ├── crypto-bigint feature "rand_core"
+│   │   │   │   │   │   │       │       │   └── crypto-bigint v0.4.9 (*)
+│   │   │   │   │   │   │       │       ├── crypto-bigint feature "zeroize"
+│   │   │   │   │   │   │       │       │   └── crypto-bigint v0.4.9 (*)
+│   │   │   │   │   │   │       │       ├── sec1 feature "default"
+│   │   │   │   │   │   │       │       │   ├── sec1 v0.3.0
+│   │   │   │   │   │   │       │       │   │   ├── base16ct v0.1.1
+│   │   │   │   │   │   │       │       │   │   ├── generic-array v0.14.7 (*)
+│   │   │   │   │   │   │       │       │   │   ├── pkcs8 v0.9.0 (*)
+│   │   │   │   │   │   │       │       │   │   ├── subtle v2.6.1
+│   │   │   │   │   │   │       │       │   │   ├── zeroize v1.8.1
+│   │   │   │   │   │   │       │       │   │   ├── der feature "default" (*)
+│   │   │   │   │   │   │       │       │   │   └── der feature "oid" (*)
+│   │   │   │   │   │   │       │       │   ├── sec1 feature "der"
+│   │   │   │   │   │   │       │       │   │   └── sec1 v0.3.0 (*)
+│   │   │   │   │   │   │       │       │   └── sec1 feature "point"
+│   │   │   │   │   │   │       │       │       ├── sec1 v0.3.0 (*)
+│   │   │   │   │   │   │       │       │       ├── sec1 feature "base16ct"
+│   │   │   │   │   │   │       │       │       │   └── sec1 v0.3.0 (*)
+│   │   │   │   │   │   │       │       │       └── sec1 feature "generic-array"
+│   │   │   │   │   │   │       │       │           └── sec1 v0.3.0 (*)
+│   │   │   │   │   │   │       │       ├── sec1 feature "subtle"
+│   │   │   │   │   │   │       │       │   └── sec1 v0.3.0 (*)
+│   │   │   │   │   │   │       │       └── sec1 feature "zeroize"
+│   │   │   │   │   │   │       │           └── sec1 v0.3.0 (*)
+│   │   │   │   │   │   │       ├── elliptic-curve feature "sec1"
+│   │   │   │   │   │   │       │   └── elliptic-curve v0.12.3 (*)
+│   │   │   │   │   │   │       ├── rfc6979 feature "default"
+│   │   │   │   │   │   │       │   └── rfc6979 v0.3.1
+│   │   │   │   │   │   │       │       ├── zeroize v1.8.1
+│   │   │   │   │   │   │       │       ├── crypto-bigint feature "generic-array" (*)
+│   │   │   │   │   │   │       │       ├── crypto-bigint feature "zeroize" (*)
+│   │   │   │   │   │   │       │       └── hmac feature "reset"
+│   │   │   │   │   │   │       │           └── hmac v0.12.1
+│   │   │   │   │   │   │       │               ├── digest feature "default" (*)
+│   │   │   │   │   │   │       │               └── digest feature "mac"
+│   │   │   │   │   │   │       │                   ├── digest v0.10.7 (*)
+│   │   │   │   │   │   │       │                   └── digest feature "subtle"
+│   │   │   │   │   │   │       │                       └── digest v0.10.7 (*)
+│   │   │   │   │   │   │       ├── signature feature "hazmat-preview"
+│   │   │   │   │   │   │       │   └── signature v1.6.4
+│   │   │   │   │   │   │       │       ├── digest v0.10.7 (*)
+│   │   │   │   │   │   │       │       └── rand_core v0.6.4 (*)
+│   │   │   │   │   │   │       └── signature feature "rand-preview"
+│   │   │   │   │   │   │           ├── signature v1.6.4 (*)
+│   │   │   │   │   │   │           └── signature feature "rand_core"
+│   │   │   │   │   │   │               └── signature v1.6.4 (*)
+│   │   │   │   │   │   ├── elliptic-curve feature "hazmat"
+│   │   │   │   │   │   │   └── elliptic-curve v0.12.3 (*)
+│   │   │   │   │   │   └── elliptic-curve feature "sec1" (*)
+│   │   │   │   │   ├── k256 feature "arithmetic"
+│   │   │   │   │   │   ├── k256 v0.11.6 (*)
+│   │   │   │   │   │   └── elliptic-curve feature "arithmetic"
+│   │   │   │   │   │       ├── elliptic-curve v0.12.3 (*)
+│   │   │   │   │   │       ├── elliptic-curve feature "ff"
+│   │   │   │   │   │       │   └── elliptic-curve v0.12.3 (*)
+│   │   │   │   │   │       └── elliptic-curve feature "group"
+│   │   │   │   │   │           └── elliptic-curve v0.12.3 (*)
+│   │   │   │   │   ├── k256 feature "ecdsa"
+│   │   │   │   │   │   ├── k256 v0.11.6 (*)
+│   │   │   │   │   │   ├── k256 feature "arithmetic" (*)
+│   │   │   │   │   │   ├── k256 feature "ecdsa-core"
+│   │   │   │   │   │   │   └── k256 v0.11.6 (*)
+│   │   │   │   │   │   ├── k256 feature "sha256"
+│   │   │   │   │   │   │   ├── k256 v0.11.6 (*)
+│   │   │   │   │   │   │   ├── k256 feature "digest"
+│   │   │   │   │   │   │   │   ├── k256 v0.11.6 (*)
+│   │   │   │   │   │   │   │   ├── k256 feature "ecdsa-core" (*)
+│   │   │   │   │   │   │   │   ├── ecdsa feature "digest"
+│   │   │   │   │   │   │   │   │   ├── ecdsa v0.14.8 (*)
+│   │   │   │   │   │   │   │   │   └── signature feature "digest-preview"
+│   │   │   │   │   │   │   │   │       ├── signature v1.6.4 (*)
+│   │   │   │   │   │   │   │   │       └── signature feature "digest"
+│   │   │   │   │   │   │   │   │           └── signature v1.6.4 (*)
+│   │   │   │   │   │   │   │   └── ecdsa feature "hazmat"
+│   │   │   │   │   │   │   │       └── ecdsa v0.14.8 (*)
+│   │   │   │   │   │   │   └── k256 feature "sha2"
+│   │   │   │   │   │   │       └── k256 v0.11.6 (*)
+│   │   │   │   │   │   ├── ecdsa feature "sign"
+│   │   │   │   │   │   │   ├── ecdsa v0.14.8 (*)
+│   │   │   │   │   │   │   ├── ecdsa feature "arithmetic"
+│   │   │   │   │   │   │   │   ├── ecdsa v0.14.8 (*)
+│   │   │   │   │   │   │   │   └── elliptic-curve feature "arithmetic" (*)
+│   │   │   │   │   │   │   ├── ecdsa feature "digest" (*)
+│   │   │   │   │   │   │   ├── ecdsa feature "hazmat" (*)
+│   │   │   │   │   │   │   └── ecdsa feature "rfc6979"
+│   │   │   │   │   │   │       └── ecdsa v0.14.8 (*)
+│   │   │   │   │   │   └── ecdsa feature "verify"
+│   │   │   │   │   │       ├── ecdsa v0.14.8 (*)
+│   │   │   │   │   │       ├── ecdsa feature "arithmetic" (*)
+│   │   │   │   │   │       ├── ecdsa feature "digest" (*)
+│   │   │   │   │   │       └── ecdsa feature "hazmat" (*)
+│   │   │   │   │   ├── k256 feature "pkcs8"
+│   │   │   │   │   │   ├── k256 v0.11.6 (*)
+│   │   │   │   │   │   ├── k256 feature "ecdsa-core" (*)
+│   │   │   │   │   │   ├── ecdsa feature "pkcs8"
+│   │   │   │   │   │   │   ├── ecdsa v0.14.8 (*)
+│   │   │   │   │   │   │   ├── ecdsa feature "der" (*)
+│   │   │   │   │   │   │   └── elliptic-curve feature "pkcs8"
+│   │   │   │   │   │   │       └── elliptic-curve v0.12.3 (*)
+│   │   │   │   │   │   └── elliptic-curve feature "pkcs8" (*)
+│   │   │   │   │   ├── k256 feature "schnorr"
+│   │   │   │   │   │   ├── k256 v0.11.6 (*)
+│   │   │   │   │   │   ├── k256 feature "arithmetic" (*)
+│   │   │   │   │   │   └── k256 feature "sha256" (*)
+│   │   │   │   │   └── k256 feature "std"
+│   │   │   │   │       ├── k256 v0.11.6 (*)
+│   │   │   │   │       ├── k256 feature "ecdsa-core" (*)
+│   │   │   │   │       ├── ecdsa feature "std"
+│   │   │   │   │       │   ├── ecdsa v0.14.8 (*)
+│   │   │   │   │       │   ├── ecdsa feature "alloc"
+│   │   │   │   │       │   │   └── ecdsa v0.14.8 (*)
+│   │   │   │   │       │   ├── elliptic-curve feature "std"
+│   │   │   │   │       │   │   ├── elliptic-curve v0.12.3 (*)
+│   │   │   │   │       │   │   ├── rand_core feature "std" (*)
+│   │   │   │   │       │   │   └── elliptic-curve feature "alloc"
+│   │   │   │   │       │   │       ├── elliptic-curve v0.12.3 (*)
+│   │   │   │   │       │   │       ├── zeroize feature "alloc" (*)
+│   │   │   │   │       │   │       ├── der feature "alloc"
+│   │   │   │   │       │   │       │   └── der v0.6.1 (*)
+│   │   │   │   │       │   │       ├── elliptic-curve feature "sec1" (*)
+│   │   │   │   │       │   │       ├── base16ct feature "alloc"
+│   │   │   │   │       │   │       │   └── base16ct v0.1.1
+│   │   │   │   │       │   │       └── sec1 feature "alloc"
+│   │   │   │   │       │   │           ├── sec1 v0.3.0 (*)
+│   │   │   │   │       │   │           ├── zeroize feature "alloc" (*)
+│   │   │   │   │       │   │           ├── der feature "alloc" (*)
+│   │   │   │   │       │   │           ├── pkcs8 feature "alloc"
+│   │   │   │   │       │   │           │   ├── pkcs8 v0.9.0 (*)
+│   │   │   │   │       │   │           │   ├── der feature "alloc" (*)
+│   │   │   │   │       │   │           │   ├── der feature "zeroize"
+│   │   │   │   │       │   │           │   │   └── der v0.6.1 (*)
+│   │   │   │   │       │   │           │   └── spki feature "alloc"
+│   │   │   │   │       │   │           │       ├── spki v0.6.0 (*)
+│   │   │   │   │       │   │           │       ├── der feature "alloc" (*)
+│   │   │   │   │       │   │           │       ├── spki feature "base64ct"
+│   │   │   │   │       │   │           │       │   └── spki v0.6.0 (*)
+│   │   │   │   │       │   │           │       └── base64ct feature "alloc"
+│   │   │   │   │       │   │           │           └── base64ct v1.7.3
+│   │   │   │   │       │   │           ├── sec1 feature "der" (*)
+│   │   │   │   │       │   │           ├── sec1 feature "pkcs8"
+│   │   │   │   │       │   │           │   └── sec1 v0.3.0 (*)
+│   │   │   │   │       │   │           └── sec1 feature "zeroize" (*)
+│   │   │   │   │       │   └── signature feature "std"
+│   │   │   │   │       │       └── signature v1.6.4 (*)
+│   │   │   │   │       └── elliptic-curve feature "std" (*)
+│   │   │   │   ├── k256 feature "ecdsa" (*)
+│   │   │   │   ├── log feature "default" (*)
+│   │   │   │   ├── rlp feature "default"
+│   │   │   │   │   ├── rlp v0.5.2
+│   │   │   │   │   │   ├── bytes v1.10.1
+│   │   │   │   │   │   └── rustc-hex v2.1.0
+│   │   │   │   │   └── rlp feature "std"
+│   │   │   │   │       ├── rlp v0.5.2 (*)
+│   │   │   │   │       ├── bytes feature "std" (*)
+│   │   │   │   │       └── rustc-hex feature "std"
+│   │   │   │   │           └── rustc-hex v2.1.0
+│   │   │   │   └── sha3 feature "default"
+│   │   │   │       ├── sha3 v0.10.8
+│   │   │   │       │   ├── digest feature "default" (*)
+│   │   │   │       │   └── keccak feature "default"
+│   │   │   │       │       └── keccak v0.1.5
+│   │   │   │       └── sha3 feature "std"
+│   │   │   │           ├── sha3 v0.10.8 (*)
+│   │   │   │           └── digest feature "std" (*)
+│   │   │   ├── enr feature "k256"
+│   │   │   │   └── enr v0.6.2 (*)
+│   │   │   └── enr feature "serde"
+│   │   │       └── enr v0.6.2 (*)
+│   │   ├── integer-sqrt feature "default"
+│   │   │   └── integer-sqrt v0.1.5
+│   │   │       └── num-traits v0.2.19 (*)
+│   │   ├── multiaddr feature "default"
+│   │   │   ├── multiaddr v0.14.0
+│   │   │   │   ├── url v2.5.4
+│   │   │   │   │   ├── percent-encoding feature "alloc"
+│   │   │   │   │   │   └── percent-encoding v2.3.1
+│   │   │   │   │   ├── form_urlencoded feature "alloc"
+│   │   │   │   │   │   ├── form_urlencoded v1.2.1
+│   │   │   │   │   │   │   └── percent-encoding v2.3.1
+│   │   │   │   │   │   └── percent-encoding feature "alloc" (*)
+│   │   │   │   │   ├── idna feature "alloc"
+│   │   │   │   │   │   └── idna v1.0.3
+│   │   │   │   │   │       ├── idna_adapter feature "default"
+│   │   │   │   │   │       │   └── idna_adapter v1.2.1
+│   │   │   │   │   │       │       ├── icu_normalizer v2.0.0
+│   │   │   │   │   │       │       │   ├── displaydoc v0.2.5 (proc-macro)
+│   │   │   │   │   │       │       │   │   ├── syn feature "default" (*)
+│   │   │   │   │   │       │       │   │   ├── proc-macro2 feature "default" (*)
+│   │   │   │   │   │       │       │   │   └── quote feature "default" (*)
+│   │   │   │   │   │       │       │   ├── icu_collections v2.0.0
+│   │   │   │   │   │       │       │   │   ├── displaydoc v0.2.5 (proc-macro) (*)
+│   │   │   │   │   │       │       │   │   ├── potential_utf feature "zerovec"
+│   │   │   │   │   │       │       │   │   │   └── potential_utf v0.1.2
+│   │   │   │   │   │       │       │   │   │       └── zerovec v0.11.2
+│   │   │   │   │   │       │       │   │   │           ├── yoke v0.8.0
+│   │   │   │   │   │       │       │   │   │           │   ├── stable_deref_trait v1.2.0
+│   │   │   │   │   │       │       │   │   │           │   ├── yoke-derive v0.8.0 (proc-macro)
+│   │   │   │   │   │       │       │   │   │           │   │   ├── syn feature "default" (*)
+│   │   │   │   │   │       │       │   │   │           │   │   ├── syn feature "fold"
+│   │   │   │   │   │       │       │   │   │           │   │   │   └── syn v2.0.101 (*)
+│   │   │   │   │   │       │       │   │   │           │   │   ├── proc-macro2 feature "default" (*)
+│   │   │   │   │   │       │       │   │   │           │   │   ├── quote feature "default" (*)
+│   │   │   │   │   │       │       │   │   │           │   │   └── synstructure feature "default"
+│   │   │   │   │   │       │       │   │   │           │   │       ├── synstructure v0.13.2
+│   │   │   │   │   │       │       │   │   │           │   │       │   ├── proc-macro2 v1.0.95 (*)
+│   │   │   │   │   │       │       │   │   │           │   │       │   ├── quote v1.0.40 (*)
+│   │   │   │   │   │       │       │   │   │           │   │       │   ├── syn feature "clone-impls" (*)
+│   │   │   │   │   │       │       │   │   │           │   │       │   ├── syn feature "derive" (*)
+│   │   │   │   │   │       │       │   │   │           │   │       │   ├── syn feature "extra-traits" (*)
+│   │   │   │   │   │       │       │   │   │           │   │       │   ├── syn feature "parsing" (*)
+│   │   │   │   │   │       │       │   │   │           │   │       │   ├── syn feature "printing" (*)
+│   │   │   │   │   │       │       │   │   │           │   │       │   └── syn feature "visit"
+│   │   │   │   │   │       │       │   │   │           │   │       │       └── syn v2.0.101 (*)
+│   │   │   │   │   │       │       │   │   │           │   │       └── synstructure feature "proc-macro"
+│   │   │   │   │   │       │       │   │   │           │   │           ├── synstructure v0.13.2 (*)
+│   │   │   │   │   │       │       │   │   │           │   │           ├── syn feature "proc-macro" (*)
+│   │   │   │   │   │       │       │   │   │           │   │           ├── proc-macro2 feature "proc-macro" (*)
+│   │   │   │   │   │       │       │   │   │           │   │           └── quote feature "proc-macro" (*)
+│   │   │   │   │   │       │       │   │   │           │   └── zerofrom v0.1.6
+│   │   │   │   │   │       │       │   │   │           │       └── zerofrom-derive v0.1.6 (proc-macro)
+│   │   │   │   │   │       │       │   │   │           │           ├── syn feature "default" (*)
+│   │   │   │   │   │       │       │   │   │           │           ├── syn feature "fold" (*)
+│   │   │   │   │   │       │       │   │   │           │           ├── proc-macro2 feature "default" (*)
+│   │   │   │   │   │       │       │   │   │           │           ├── quote feature "default" (*)
+│   │   │   │   │   │       │       │   │   │           │           └── synstructure feature "default" (*)
+│   │   │   │   │   │       │       │   │   │           ├── zerofrom v0.1.6 (*)
+│   │   │   │   │   │       │       │   │   │           └── zerovec-derive v0.11.1 (proc-macro)
+│   │   │   │   │   │       │       │   │   │               ├── syn feature "default" (*)
+│   │   │   │   │   │       │       │   │   │               ├── syn feature "extra-traits" (*)
+│   │   │   │   │   │       │       │   │   │               ├── proc-macro2 feature "default" (*)
+│   │   │   │   │   │       │       │   │   │               └── quote feature "default" (*)
+│   │   │   │   │   │       │       │   │   ├── zerovec feature "derive"
+│   │   │   │   │   │       │       │   │   │   └── zerovec v0.11.2 (*)
+│   │   │   │   │   │       │       │   │   ├── zerovec feature "yoke"
+│   │   │   │   │   │       │       │   │   │   └── zerovec v0.11.2 (*)
+│   │   │   │   │   │       │       │   │   ├── yoke feature "derive"
+│   │   │   │   │   │       │       │   │   │   ├── yoke v0.8.0 (*)
+│   │   │   │   │   │       │       │   │   │   ├── yoke feature "zerofrom"
+│   │   │   │   │   │       │       │   │   │   │   └── yoke v0.8.0 (*)
+│   │   │   │   │   │       │       │   │   │   └── zerofrom feature "derive"
+│   │   │   │   │   │       │       │   │   │       └── zerofrom v0.1.6 (*)
+│   │   │   │   │   │       │       │   │   └── zerofrom feature "derive" (*)
+│   │   │   │   │   │       │       │   ├── icu_normalizer_data v2.0.0
+│   │   │   │   │   │       │       │   ├── icu_provider v2.0.0
+│   │   │   │   │   │       │       │   │   ├── displaydoc v0.2.5 (proc-macro) (*)
+│   │   │   │   │   │       │       │   │   ├── icu_locale_core v2.0.0
+│   │   │   │   │   │       │       │   │   │   ├── displaydoc v0.2.5 (proc-macro) (*)
+│   │   │   │   │   │       │       │   │   │   ├── writeable v0.6.1
+│   │   │   │   │   │       │       │   │   │   ├── zerovec v0.11.2 (*)
+│   │   │   │   │   │       │       │   │   │   ├── litemap feature "alloc"
+│   │   │   │   │   │       │       │   │   │   │   └── litemap v0.8.0
+│   │   │   │   │   │       │       │   │   │   └── tinystr feature "alloc"
+│   │   │   │   │   │       │       │   │   │       ├── tinystr v0.8.1
+│   │   │   │   │   │       │       │   │   │       │   ├── displaydoc v0.2.5 (proc-macro) (*)
+│   │   │   │   │   │       │       │   │   │       │   └── zerovec v0.11.2 (*)
+│   │   │   │   │   │       │       │   │   │       └── zerovec feature "alloc"
+│   │   │   │   │   │       │       │   │   │           └── zerovec v0.11.2 (*)
+│   │   │   │   │   │       │       │   │   ├── stable_deref_trait v1.2.0
+│   │   │   │   │   │       │       │   │   ├── tinystr v0.8.1 (*)
+│   │   │   │   │   │       │       │   │   ├── writeable v0.6.1
+│   │   │   │   │   │       │       │   │   ├── zerotrie v0.2.2
+│   │   │   │   │   │       │       │   │   │   ├── displaydoc v0.2.5 (proc-macro) (*)
+│   │   │   │   │   │       │       │   │   │   ├── zerofrom v0.1.6 (*)
+│   │   │   │   │   │       │       │   │   │   └── yoke feature "derive" (*)
+│   │   │   │   │   │       │       │   │   ├── zerovec feature "derive" (*)
+│   │   │   │   │   │       │       │   │   ├── yoke feature "alloc"
+│   │   │   │   │   │       │       │   │   │   ├── yoke v0.8.0 (*)
+│   │   │   │   │   │       │       │   │   │   ├── yoke feature "zerofrom" (*)
+│   │   │   │   │   │       │       │   │   │   ├── stable_deref_trait feature "alloc"
+│   │   │   │   │   │       │       │   │   │   │   └── stable_deref_trait v1.2.0
+│   │   │   │   │   │       │       │   │   │   └── zerofrom feature "alloc"
+│   │   │   │   │   │       │       │   │   │       └── zerofrom v0.1.6 (*)
+│   │   │   │   │   │       │       │   │   ├── yoke feature "derive" (*)
+│   │   │   │   │   │       │       │   │   ├── zerofrom feature "alloc" (*)
+│   │   │   │   │   │       │       │   │   └── zerofrom feature "derive" (*)
+│   │   │   │   │   │       │       │   ├── smallvec v1.15.0
+│   │   │   │   │   │       │       │   └── zerovec v0.11.2 (*)
+│   │   │   │   │   │       │       └── icu_properties v2.0.1
+│   │   │   │   │   │       │           ├── displaydoc v0.2.5 (proc-macro) (*)
+│   │   │   │   │   │       │           ├── icu_collections v2.0.0 (*)
+│   │   │   │   │   │       │           ├── icu_properties_data v2.0.1
+│   │   │   │   │   │       │           ├── icu_provider v2.0.0 (*)
+│   │   │   │   │   │       │           ├── potential_utf feature "zerovec" (*)
+│   │   │   │   │   │       │           ├── zerovec feature "derive" (*)
+│   │   │   │   │   │       │           ├── zerovec feature "yoke" (*)
+│   │   │   │   │   │       │           ├── icu_locale_core feature "zerovec"
+│   │   │   │   │   │       │           │   ├── icu_locale_core v2.0.0 (*)
+│   │   │   │   │   │       │           │   └── tinystr feature "zerovec"
+│   │   │   │   │   │       │           │       └── tinystr v0.8.1 (*)
+│   │   │   │   │   │       │           ├── zerotrie feature "yoke"
+│   │   │   │   │   │       │           │   └── zerotrie v0.2.2 (*)
+│   │   │   │   │   │       │           └── zerotrie feature "zerofrom"
+│   │   │   │   │   │       │               └── zerotrie v0.2.2 (*)
+│   │   │   │   │   │       ├── smallvec feature "const_generics"
+│   │   │   │   │   │       │   └── smallvec v1.15.0
+│   │   │   │   │   │       ├── smallvec feature "default"
+│   │   │   │   │   │       │   └── smallvec v1.15.0
+│   │   │   │   │   │       └── utf8_iter feature "default"
+│   │   │   │   │   │           └── utf8_iter v1.0.4
+│   │   │   │   │   └── idna feature "compiled_data"
+│   │   │   │   │       ├── idna v1.0.3 (*)
+│   │   │   │   │       └── idna_adapter feature "compiled_data"
+│   │   │   │   │           ├── idna_adapter v1.2.1 (*)
+│   │   │   │   │           ├── icu_normalizer feature "compiled_data"
+│   │   │   │   │           │   ├── icu_normalizer v2.0.0 (*)
+│   │   │   │   │           │   └── icu_provider feature "baked"
+│   │   │   │   │           │       ├── icu_provider v2.0.0 (*)
+│   │   │   │   │           │       └── icu_provider feature "zerotrie"
+│   │   │   │   │           │           └── icu_provider v2.0.0 (*)
+│   │   │   │   │           └── icu_properties feature "compiled_data"
+│   │   │   │   │               ├── icu_properties v2.0.1 (*)
+│   │   │   │   │               └── icu_provider feature "baked" (*)
+│   │   │   │   ├── serde feature "default" (*)
+│   │   │   │   ├── arrayref feature "default" (*)
+│   │   │   │   ├── static_assertions feature "default" (*)
+│   │   │   │   ├── bs58 feature "default" (*)
+│   │   │   │   ├── byteorder feature "default"
+│   │   │   │   │   ├── byteorder v1.5.0
+│   │   │   │   │   └── byteorder feature "std"
+│   │   │   │   │       └── byteorder v1.5.0
+│   │   │   │   ├── data-encoding feature "default"
+│   │   │   │   │   ├── data-encoding v2.9.0
+│   │   │   │   │   └── data-encoding feature "std"
+│   │   │   │   │       ├── data-encoding v2.9.0
+│   │   │   │   │       └── data-encoding feature "alloc"
+│   │   │   │   │           └── data-encoding v2.9.0
+│   │   │   │   ├── multihash feature "identity"
+│   │   │   │   │   └── multihash v0.16.3
+│   │   │   │   │       ├── core2 v0.4.0
+│   │   │   │   │       │   └── memchr v2.7.4
+│   │   │   │   │       ├── digest v0.10.7 (*)
+│   │   │   │   │       ├── multihash-derive v0.8.1 (proc-macro)
+│   │   │   │   │       │   ├── proc-macro2 feature "default" (*)
+│   │   │   │   │       │   ├── proc-macro2 feature "span-locations"
+│   │   │   │   │       │   │   └── proc-macro2 v1.0.95 (*)
+│   │   │   │   │       │   ├── quote feature "default" (*)
+│   │   │   │   │       │   ├── syn feature "default" (*)
+│   │   │   │   │       │   ├── proc-macro-crate feature "default"
+│   │   │   │   │       │   │   └── proc-macro-crate v1.1.3
+│   │   │   │   │       │   │       ├── thiserror feature "default"
+│   │   │   │   │       │   │       │   └── thiserror v1.0.69
+│   │   │   │   │       │   │       │       └── thiserror-impl feature "default" (*)
+│   │   │   │   │       │   │       └── toml feature "default"
+│   │   │   │   │       │   │           └── toml v0.5.11
+│   │   │   │   │       │   │               └── serde feature "default"
+│   │   │   │   │       │   │                   ├── serde v1.0.219
+│   │   │   │   │       │   │                   │   └── serde_derive feature "default" (*)
+│   │   │   │   │       │   │                   └── serde feature "std"
+│   │   │   │   │       │   │                       └── serde v1.0.219 (*)
+│   │   │   │   │       │   ├── proc-macro-error feature "default"
+│   │   │   │   │       │   │   ├── proc-macro-error v1.0.4
+│   │   │   │   │       │   │   │   ├── syn v1.0.109 (*)
+│   │   │   │   │       │   │   │   ├── proc-macro2 feature "default" (*)
+│   │   │   │   │       │   │   │   ├── quote feature "default" (*)
+│   │   │   │   │       │   │   │   └── proc-macro-error-attr feature "default"
+│   │   │   │   │       │   │   │       └── proc-macro-error-attr v1.0.4 (proc-macro)
+│   │   │   │   │       │   │   │           ├── proc-macro2 feature "default" (*)
+│   │   │   │   │       │   │   │           └── quote feature "default" (*)
+│   │   │   │   │       │   │   │           [build-dependencies]
+│   │   │   │   │       │   │   │           └── version_check feature "default" (*)
+│   │   │   │   │       │   │   │   [build-dependencies]
+│   │   │   │   │       │   │   │   └── version_check feature "default" (*)
+│   │   │   │   │       │   │   └── proc-macro-error feature "syn-error"
+│   │   │   │   │       │   │       ├── proc-macro-error v1.0.4 (*)
+│   │   │   │   │       │   │       └── proc-macro-error feature "syn"
+│   │   │   │   │       │   │           └── proc-macro-error v1.0.4 (*)
+│   │   │   │   │       │   └── synstructure feature "default"
+│   │   │   │   │       │       ├── synstructure v0.12.6
+│   │   │   │   │       │       │   ├── proc-macro2 v1.0.95 (*)
+│   │   │   │   │       │       │   ├── quote v1.0.40 (*)
+│   │   │   │   │       │       │   ├── syn feature "clone-impls" (*)
+│   │   │   │   │       │       │   ├── syn feature "derive" (*)
+│   │   │   │   │       │       │   ├── syn feature "extra-traits"
+│   │   │   │   │       │       │   │   └── syn v1.0.109 (*)
+│   │   │   │   │       │       │   ├── syn feature "parsing" (*)
+│   │   │   │   │       │       │   ├── syn feature "printing" (*)
+│   │   │   │   │       │       │   ├── syn feature "visit"
+│   │   │   │   │       │       │   │   └── syn v1.0.109 (*)
+│   │   │   │   │       │       │   └── unicode-xid feature "default"
+│   │   │   │   │       │       │       └── unicode-xid v0.2.6
+│   │   │   │   │       │       └── synstructure feature "proc-macro"
+│   │   │   │   │       │           ├── synstructure v0.12.6 (*)
+│   │   │   │   │       │           ├── proc-macro2 feature "proc-macro" (*)
+│   │   │   │   │       │           ├── quote feature "proc-macro" (*)
+│   │   │   │   │       │           └── syn feature "proc-macro" (*)
+│   │   │   │   │       ├── sha2 v0.10.9 (*)
+│   │   │   │   │       └── unsigned-varint v0.7.2
+│   │   │   │   ├── multihash feature "multihash-impl"
+│   │   │   │   │   ├── multihash v0.16.3 (*)
+│   │   │   │   │   └── multihash feature "derive"
+│   │   │   │   │       ├── multihash v0.16.3 (*)
+│   │   │   │   │       └── multihash feature "multihash-derive"
+│   │   │   │   │           └── multihash v0.16.3 (*)
+│   │   │   │   ├── multihash feature "std"
+│   │   │   │   │   ├── multihash v0.16.3 (*)
+│   │   │   │   │   ├── multihash feature "alloc"
+│   │   │   │   │   │   ├── multihash v0.16.3 (*)
+│   │   │   │   │   │   └── core2 feature "alloc"
+│   │   │   │   │   │       └── core2 v0.4.0 (*)
+│   │   │   │   │   ├── multihash feature "multihash-derive" (*)
+│   │   │   │   │   ├── multihash-derive feature "std"
+│   │   │   │   │   │   └── multihash-derive v0.8.1 (proc-macro) (*)
+│   │   │   │   │   └── unsigned-varint feature "std"
+│   │   │   │   │       └── unsigned-varint v0.7.2
+│   │   │   │   ├── unsigned-varint feature "default"
+│   │   │   │   │   └── unsigned-varint v0.7.2
+│   │   │   │   └── percent-encoding feature "default"
+│   │   │   │       ├── percent-encoding v2.3.1
+│   │   │   │       └── percent-encoding feature "std"
+│   │   │   │           ├── percent-encoding v2.3.1
+│   │   │   │           └── percent-encoding feature "alloc" (*)
+│   │   │   └── multiaddr feature "url"
+│   │   │       └── multiaddr v0.14.0 (*)
+│   │   ├── multihash feature "identity" (*)
+│   │   ├── multihash feature "multihash-impl" (*)
+│   │   ├── multihash feature "sha2"
+│   │   │   ├── multihash v0.16.3 (*)
+│   │   │   ├── multihash feature "digest"
+│   │   │   │   └── multihash v0.16.3 (*)
+│   │   │   └── multihash feature "sha-2"
+│   │   │       └── multihash v0.16.3 (*)
+│   │   ├── multihash feature "std" (*)
+│   │   ├── serde_json feature "default"
+│   │   │   ├── serde_json v1.0.140
+│   │   │   │   ├── memchr v2.7.4
+│   │   │   │   ├── serde v1.0.219 (*)
+│   │   │   │   ├── itoa feature "default"
+│   │   │   │   │   └── itoa v1.0.15
+│   │   │   │   └── ryu feature "default"
+│   │   │   │       └── ryu v1.0.20
+│   │   │   └── serde_json feature "std"
+│   │   │       ├── serde_json v1.0.140 (*)
+│   │   │       ├── serde feature "std" (*)
+│   │   │       └── memchr feature "std"
+│   │   │           ├── memchr v2.7.4
+│   │   │           └── memchr feature "alloc"
+│   │   │               └── memchr v2.7.4
+│   │   ├── serde_yaml feature "default"
+│   │   │   └── serde_yaml v0.8.26
+│   │   │       ├── serde feature "default" (*)
+│   │   │       ├── ryu feature "default" (*)
+│   │   │       ├── indexmap feature "default"
+│   │   │       │   └── indexmap v1.9.3
+│   │   │       │       └── hashbrown feature "raw"
+│   │   │       │           └── hashbrown v0.12.3
+│   │   │       │       [build-dependencies]
+│   │   │       │       └── autocfg feature "default" (*)
+│   │   │       ├── indexmap feature "std"
+│   │   │       │   └── indexmap v1.9.3 (*)
+│   │   │       └── yaml-rust feature "default"
+│   │   │           └── yaml-rust v0.4.5
+│   │   │               └── linked-hash-map feature "default"
+│   │   │                   └── linked-hash-map v0.5.6
+│   │   ├── sha2 feature "default"
+│   │   │   ├── sha2 v0.9.9 (*)
+│   │   │   └── sha2 feature "std"
+│   │   │       ├── sha2 v0.9.9 (*)
+│   │   │       └── digest feature "std"
+│   │   │           ├── digest v0.9.0 (*)
+│   │   │           └── digest feature "alloc"
+│   │   │               └── digest v0.9.0 (*)
+│   │   ├── ssz-rs feature "default"
+│   │   │   ├── ssz-rs v0.8.0 (/home/ubuntu/Zipline-Casper/finality-client/libs/ssz-rs/ssz-rs) (*)
+│   │   │   ├── ssz-rs feature "serde"
+│   │   │   │   └── ssz-rs v0.8.0 (/home/ubuntu/Zipline-Casper/finality-client/libs/ssz-rs/ssz-rs) (*)
+│   │   │   └── ssz-rs feature "std"
+│   │   │       ├── ssz-rs v0.8.0 (/home/ubuntu/Zipline-Casper/finality-client/libs/ssz-rs/ssz-rs) (*)
+│   │   │       ├── bitvec feature "default"
+│   │   │       │   ├── bitvec v1.0.1 (*)
+│   │   │       │   ├── bitvec feature "atomic"
+│   │   │       │   │   └── bitvec v1.0.1 (*)
+│   │   │       │   └── bitvec feature "std"
+│   │   │       │       ├── bitvec v1.0.1 (*)
+│   │   │       │       └── bitvec feature "alloc" (*)
+│   │   │       ├── num-bigint feature "default" (*)
+│   │   │       ├── sha2 feature "default" (*)
+│   │   │       └── sha2 feature "default"
+│   │   │           ├── sha2 v0.9.9 (*)
+│   │   │           └── sha2 feature "std"
+│   │   │               ├── sha2 v0.9.9 (*)
+│   │   │               └── digest feature "std"
+│   │   │                   ├── digest v0.9.0 (*)
+│   │   │                   └── digest feature "alloc"
+│   │   │                       └── digest v0.9.0 (*)
+│   │   ├── thiserror feature "default" (*)
+│   │   ├── tokio feature "default"
+│   │   │   └── tokio v1.45.1
+│   │   │       ├── mio v1.0.4
+│   │   │       ├── pin-project-lite feature "default" (*)
+│   │   │       ├── bytes feature "default" (*)
+│   │   │       ├── parking_lot feature "default"
+│   │   │       │   └── parking_lot v0.12.3
+│   │   │       │       ├── lock_api feature "default" (*)
+│   │   │       │       └── parking_lot_core feature "default"
+│   │   │       │           └── parking_lot_core v0.9.10
+│   │   │       │               ├── cfg-if feature "default" (*)
+│   │   │       │               └── smallvec feature "default" (*)
+│   │   │       ├── socket2 feature "all"
+│   │   │       │   └── socket2 v0.5.10
+│   │   │       ├── socket2 feature "default"
+│   │   │       │   └── socket2 v0.5.10
+│   │   │       └── tokio-macros feature "default"
+│   │   │           └── tokio-macros v2.5.0 (proc-macro)
+│   │   │               ├── syn feature "default" (*)
+│   │   │               ├── syn feature "full" (*)
+│   │   │               ├── proc-macro2 feature "default" (*)
+│   │   │               └── quote feature "default" (*)
+│   │   ├── tokio feature "full"
+│   │   │   ├── tokio v1.45.1 (*)
+│   │   │   ├── tokio feature "fs"
+│   │   │   │   └── tokio v1.45.1 (*)
+│   │   │   ├── tokio feature "io-std"
+│   │   │   │   └── tokio v1.45.1 (*)
+│   │   │   ├── tokio feature "io-util"
+│   │   │   │   ├── tokio v1.45.1 (*)
+│   │   │   │   └── tokio feature "bytes"
+│   │   │   │       └── tokio v1.45.1 (*)
+│   │   │   ├── tokio feature "macros"
+│   │   │   │   ├── tokio v1.45.1 (*)
+│   │   │   │   └── tokio feature "tokio-macros"
+│   │   │   │       └── tokio v1.45.1 (*)
+│   │   │   ├── tokio feature "net"
+│   │   │   │   ├── tokio v1.45.1 (*)
+│   │   │   │   ├── tokio feature "libc"
+│   │   │   │   │   └── tokio v1.45.1 (*)
+│   │   │   │   ├── tokio feature "mio"
+│   │   │   │   │   └── tokio v1.45.1 (*)
+│   │   │   │   ├── tokio feature "socket2"
+│   │   │   │   │   └── tokio v1.45.1 (*)
+│   │   │   │   ├── mio feature "net"
+│   │   │   │   │   └── mio v1.0.4
+│   │   │   │   ├── mio feature "os-ext"
+│   │   │   │   │   ├── mio v1.0.4
+│   │   │   │   │   └── mio feature "os-poll"
+│   │   │   │   │       └── mio v1.0.4
+│   │   │   │   └── mio feature "os-poll" (*)
+│   │   │   ├── tokio feature "parking_lot"
+│   │   │   │   └── tokio v1.45.1 (*)
+│   │   │   ├── tokio feature "process"
+│   │   │   │   ├── tokio v1.45.1 (*)
+│   │   │   │   ├── tokio feature "bytes" (*)
+│   │   │   │   ├── tokio feature "libc" (*)
+│   │   │   │   ├── tokio feature "mio" (*)
+│   │   │   │   ├── tokio feature "signal-hook-registry"
+│   │   │   │   │   └── tokio v1.45.1 (*)
+│   │   │   │   ├── mio feature "net" (*)
+│   │   │   │   ├── mio feature "os-ext" (*)
+│   │   │   │   └── mio feature "os-poll" (*)
+│   │   │   ├── tokio feature "rt"
+│   │   │   │   └── tokio v1.45.1 (*)
+│   │   │   ├── tokio feature "rt-multi-thread"
+│   │   │   │   ├── tokio v1.45.1 (*)
+│   │   │   │   └── tokio feature "rt" (*)
+│   │   │   ├── tokio feature "signal"
+│   │   │   │   ├── tokio v1.45.1 (*)
+│   │   │   │   ├── tokio feature "libc" (*)
+│   │   │   │   ├── tokio feature "mio" (*)
+│   │   │   │   ├── tokio feature "signal-hook-registry" (*)
+│   │   │   │   ├── mio feature "net" (*)
+│   │   │   │   ├── mio feature "os-ext" (*)
+│   │   │   │   └── mio feature "os-poll" (*)
+│   │   │   ├── tokio feature "sync"
+│   │   │   │   └── tokio v1.45.1 (*)
+│   │   │   └── tokio feature "time"
+│   │   │       └── tokio v1.45.1 (*)
+│   │   └── tokio-stream feature "default"
+│   │       ├── tokio-stream v0.1.17
+│   │       │   ├── futures-core feature "default" (*)
+│   │       │   ├── pin-project-lite feature "default" (*)
+│   │       │   ├── tokio feature "default" (*)
+│   │       │   └── tokio feature "sync" (*)
+│   │       └── tokio-stream feature "time"
+│   │           ├── tokio-stream v0.1.17 (*)
+│   │           └── tokio feature "time" (*)
+│   ├── ethereum-consensus feature "async"
+│   │   ├── ethereum-consensus v0.1.1 (https://github.com/nulltea/ethereum-consensus?rev=facd29481b844c864434b9d6d580ce081ddd6570#facd2948) (*)
+│   │   ├── ethereum-consensus feature "async-stream"
+│   │   │   └── ethereum-consensus v0.1.1 (https://github.com/nulltea/ethereum-consensus?rev=facd29481b844c864434b9d6d580ce081ddd6570#facd2948) (*)
+│   │   ├── ethereum-consensus feature "tokio"
+│   │   │   └── ethereum-consensus v0.1.1 (https://github.com/nulltea/ethereum-consensus?rev=facd29481b844c864434b9d6d580ce081ddd6570#facd2948) (*)
+│   │   └── ethereum-consensus feature "tokio-stream"
+│   │       └── ethereum-consensus v0.1.1 (https://github.com/nulltea/ethereum-consensus?rev=facd29481b844c864434b9d6d580ce081ddd6570#facd2948) (*)
+│   └── ethereum-consensus feature "serde"
+│       ├── ethereum-consensus v0.1.1 (https://github.com/nulltea/ethereum-consensus?rev=facd29481b844c864434b9d6d580ce081ddd6570#facd2948) (*)
+│       ├── ethereum-consensus feature "hex"
+│       │   └── ethereum-consensus v0.1.1 (https://github.com/nulltea/ethereum-consensus?rev=facd29481b844c864434b9d6d580ce081ddd6570#facd2948) (*)
+│       ├── ethereum-consensus feature "serde_json"
+│       │   └── ethereum-consensus v0.1.1 (https://github.com/nulltea/ethereum-consensus?rev=facd29481b844c864434b9d6d580ce081ddd6570#facd2948) (*)
+│       └── ethereum-consensus feature "serde_yaml"
+│           └── ethereum-consensus v0.1.1 (https://github.com/nulltea/ethereum-consensus?rev=facd29481b844c864434b9d6d580ce081ddd6570#facd2948) (*)
+├── ethereum-consensus feature "serde" (*)
+├── log feature "default" (*)
+├── preimage-oracle feature "hashmap-oracle"
+│   └── preimage-oracle v0.1.0 (/home/ubuntu/Zipline-Casper/preimage-oracle)
+│       ├── bitvec v1.0.1 (*)
+│       ├── log feature "default" (*)
+│       └── heapless feature "default"
+│           ├── heapless v0.7.17
+│           │   ├── stable_deref_trait v1.2.0
+│           │   └── hash32 feature "default"
+│           │       └── hash32 v0.2.1
+│           │           └── byteorder v1.5.0
+│           │   [build-dependencies]
+│           │   └── rustc_version feature "default"
+│           │       └── rustc_version v0.4.1
+│           │           └── semver feature "default"
+│           │               ├── semver v1.0.26
+│           │               └── semver feature "std"
+│           │                   └── semver v1.0.26
+│           └── heapless feature "cas"
+│               ├── heapless v0.7.17 (*)
+│               └── heapless feature "atomic-polyfill"
+│                   └── heapless v0.7.17 (*)
+├── zipline-finality-client feature "default"
+│   └── zipline-finality-client v0.1.0 (/home/ubuntu/Zipline-Casper/finality-client)
+│       ├── hex v0.4.3 (*)
+│       ├── once_cell v1.21.3
+│       ├── ssz-rs v0.8.0 (/home/ubuntu/Zipline-Casper/finality-client/libs/ssz-rs/ssz-rs) (*)
+│       ├── crypto feature "default" (*)
+│       ├── typenum feature "default" (*)
+│       ├── serde feature "default" (*)
+│       ├── serde feature "derive" (*)
+│       ├── log feature "default" (*)
+│       ├── preimage-oracle feature "hashmap-oracle" (*)
+│       ├── preimage-oracle feature "ssz"
+│       │   └── preimage-oracle v0.1.0 (/home/ubuntu/Zipline-Casper/preimage-oracle) (*)
+│       ├── validator-shuffling feature "default"
+│       │   └── validator-shuffling v0.1.0 (/home/ubuntu/Zipline-Casper/finality-client/libs/validator-shuffling)
+│       │       ├── crypto feature "default" (*)
+│       │       └── zipline-spec feature "default"
+│       │           └── zipline-spec v0.1.0 (/home/ubuntu/Zipline-Casper/finality-client/libs/zipline-spec)
+│       │               ├── ssz-rs v0.8.0 (/home/ubuntu/Zipline-Casper/finality-client/libs/ssz-rs/ssz-rs) (*)
+│       │               ├── typenum feature "default" (*)
+│       │               └── hex-literal feature "default"
+│       │                   └── hex-literal v0.3.4 (proc-macro)
+│       └── zipline-spec feature "default" (*)
+└── zipline-spec feature "default" (*)

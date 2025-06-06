@@ -114,7 +114,7 @@ fn same_public_keys<'a>(
     a: &spec::Attestation,
     context: &ethereum_consensus::state_transition::Context,
 ) -> Result<
-    (Vec<crypto::bls::PublicKey>, Vec<&'a BlsPublicKey>),
+    (Vec<crypto::bls_openvm::PublicKey>, Vec<&'a BlsPublicKey>),
     ethereum_consensus::state_transition::Error,
 > {
     let state_reader = DirectStateReader::new(state.clone());

@@ -85,6 +85,7 @@ where
 
 impl<T> SimpleSerialize for Option<T> where T: SimpleSerialize {}
 
+#[cfg(feature = "std")]
 #[cfg(test)]
 mod tests {
     use crate::prelude::*;

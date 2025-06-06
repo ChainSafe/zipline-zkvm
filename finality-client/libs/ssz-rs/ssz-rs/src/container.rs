@@ -1,3 +1,4 @@
+#[cfg(feature = "std")]
 #[cfg(test)]
 mod tests {
     use crate::prelude::*;

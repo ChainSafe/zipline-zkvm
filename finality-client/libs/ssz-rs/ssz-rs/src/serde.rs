@@ -3,21 +3,32 @@ use hex::FromHexError;
 #[cfg(feature = "std")]
 use thiserror::Error;
 
+#[cfg(not(feature = "std"))]
+extern crate alloc;
+
+#[cfg(not(feature = "std"))]
+use alloc::{format, string::String, vec::Vec};
+
 const HEX_ENCODING_PREFIX: &str = "0x";
 
 #[derive(Debug)]
-#[cfg(feature = "std")]
-#[derive(Error)]
 pub enum HexError {
-    #[error("{0}")]
-    Hex(#[from] FromHexError),
-    #[error("missing prefix `{HEX_ENCODING_PREFIX}` when deserializing hex data")]
     MissingPrefix,
+    Hex(FromHexError),
+}
+
+impl core::fmt::Display for HexError {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        match self {
+            HexError::MissingPrefix => write!(f, "missing prefix `{HEX_ENCODING_PREFIX}` when deserializing hex data"),
+            HexError::Hex(e) => write!(f, "invalid hex data: {}", e),
+        }
+    }
 }
 
 fn try_bytes_from_hex_str(s: &str) -> Result<Vec<u8>, HexError> {
     let target = s.strip_prefix(HEX_ENCODING_PREFIX).ok_or(HexError::MissingPrefix)?;
-    let data = hex::decode(target)?;
+    let data = hex::decode(target).map_err(HexError::Hex)?;
     Ok(data)
 }
 
@@ -49,6 +60,7 @@ pub mod as_hex {
     }
 }
 
+#[cfg(feature = "std")]
 #[cfg(test)]
 mod test {
     use crate::prelude::*;
